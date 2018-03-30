@@ -90,9 +90,11 @@ export LANG=fr_FR.UTF-8
 
 # unix
 alias ll="ls -la"
+alias f="fuck"
 
 # npm
 alias nr="npm run"
+alias nx="npx"
 
 # git
 alias gs="git status"
@@ -103,6 +105,10 @@ alias gco="git checkout"
 
 # vagrant fuck you !
 alias vfu="vagrant halt && vagrant up && vagrant ssh"
+
+# kalliste
+alias kpull="git subtree pull --prefix=assets/kalliste2  kalliste master --squash"
+alias kpush="git subtree push --prefix=assets/kalliste2  kalliste master"
 
 # Set the infamous `fuck` command
 eval "$(thefuck --alias fuck)"
