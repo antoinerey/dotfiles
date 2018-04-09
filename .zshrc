@@ -91,10 +91,13 @@ export LANG=fr_FR.UTF-8
 # unix
 alias ll="ls -la"
 alias f="fuck"
+alias ff="fuck --yes"
 
 # npm
 alias nr="npm run"
 alias nx="npx"
+alias ni="npm install"
+alias nid="npm install --save-dev"
 
 # git
 alias gs="git status"
