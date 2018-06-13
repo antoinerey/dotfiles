@@ -98,6 +98,7 @@ alias nr="npm run"
 alias nx="npx"
 alias ni="npm install"
 alias nid="npm install --save-dev"
+alias nt="npm test"
 
 # git
 alias gs="git status"
