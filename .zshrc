@@ -68,7 +68,7 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # Fixes: https://github.com/zeit/hyper/issues/2328
-export LANG=fr_FR.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -92,27 +92,25 @@ export LANG=fr_FR.UTF-8
 alias ll="ls -la"
 alias f="fuck"
 alias ff="fuck --yes"
+alias k="kubectl"
+alias c="clear"
 
-# npm
-alias nr="npm run"
-alias nx="npx"
-alias ni="npm install"
-alias nid="npm install --save-dev"
-alias nt="npm test"
+# yarn
+alias y="yarn"
+alias yr="yarn run"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+alias yt="yarn test"
 
 # git
 alias gs="git status"
 alias gaa="git add ."
 alias gc="git commit"
 alias gd="git diff --ignore-space-change"
+alias gds="git diff --ignore-space-change --staged"
 alias gco="git checkout"
-
-# vagrant fuck you !
-alias vfu="vagrant halt && vagrant up && vagrant ssh"
-
-# kalliste
-alias kpull="git subtree pull --prefix=assets/kalliste2  kalliste master --squash"
-alias kpush="git subtree push --prefix=assets/kalliste2  kalliste master"
+alias gpf="git push --force-with-lease"
+alias gl="git log"
 
 # Set the infamous `fuck` command
 eval "$(thefuck --alias fuck)"

@@ -1,3 +1,11 @@
 [user]
 	name = Antoine Rey
-	email = antoinerey38@gmail.com
+	email = antoine.rey@backmarket.com
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[core]
+	editor = code --wait
+[pull]
+	rebase = true
