@@ -111,6 +111,7 @@ alias gds="git diff --ignore-space-change --staged"
 alias gco="git checkout"
 alias gpf="git push --force-with-lease"
 alias gl="git log"
+alias glr="gl --oneline --no-merges $(git describe --abbrev=0 --tags)...origin/master"
 
 # Set the infamous `fuck` command
 eval "$(thefuck --alias fuck)"
