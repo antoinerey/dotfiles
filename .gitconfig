@@ -1,11 +1,8 @@
 [user]
 	name = Antoine Rey
 	email = antoine.rey@backmarket.com
-[diff]
-	tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
 [core]
 	editor = code --wait
+	excludesfile = ~/.gitignore
 [pull]
 	rebase = true
