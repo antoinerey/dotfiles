@@ -52,7 +52,7 @@ ZSH_THEME="custom"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/.dotfiles/zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -67,6 +67,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # Fixes: https://github.com/zeit/hyper/issues/2328
 export LANG=en_US.UTF-8
+export EDITOR="code -w"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -74,7 +75,7 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 
 # unix
-alias ll="ls -la"
+alias ll="ls -lA"
 alias f="fuck"
 alias ff="fuck --yes"
 alias k="kubectl"
@@ -100,5 +101,3 @@ alias gl="git log"
 
 # Set the infamous `fuck` command
 eval "$(thefuck --alias fuck)"
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
