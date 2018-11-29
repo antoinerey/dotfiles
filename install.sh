@@ -30,3 +30,6 @@ for cask in $(cat ${BASEDIR}/config/casks); do
     brew cask install $cask
   fi
 done
+
+# Setup MacOS configuration
+bash ./macos.sh
