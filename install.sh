@@ -14,6 +14,9 @@ for file in $(ls -A ${BASEDIR}/files); do
   fi
 done
 
+# Link Alfred preferences
+ln -s ${BASEDIR}/alfred ~/Alfred.alfredpreferences
+
 # Install commands listed in `./config/commands`
 for command in $(cat ${BASEDIR}/config/commands); do
   if ! brew list $command &> /dev/null; then
