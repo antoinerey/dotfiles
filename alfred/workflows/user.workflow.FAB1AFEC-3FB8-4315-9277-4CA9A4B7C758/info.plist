@@ -137,7 +137,7 @@
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>keyword</key>
-				<string>g</string>
+				<string>gh</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -157,7 +157,7 @@
 				<key>subtext</key>
 				<string>Search or type a command</string>
 				<key>title</key>
-				<string>g...</string>
+				<string>gh...</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>

@@ -56,6 +56,58 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>506AF8B0-3D1E-4603-A7EA-BF2FC4EF42DA</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>travis</string>
+			<key>text</key>
+			<string>Open Travis on '{query}'</string>
+			<key>url</key>
+			<string>https://travis-ci.com/BackMarket/{query}/builds</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9C445D6E-FF98-44C9-B3CA-414C2629EDDF</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jira</string>
+			<key>text</key>
+			<string>Search Jira for '{query}'</string>
+			<key>url</key>
+			<string>https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=60&amp;projectKey=CORE&amp;search={query}&amp;assignee=antoine.rey</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>A9968425-7FDB-4526-B6E3-4E73B86C0CA4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>jira</string>
+			<key>text</key>
+			<string>Open Jira</string>
+			<key>url</key>
+			<string>https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=60&amp;projectKey=CORE&amp;assignee=antoine.rey</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>D3B0BEB8-FA9D-48DB-983A-6A4A50F77F29</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>travis</string>
+			<key>text</key>
+			<string>Open Travis</string>
+			<key>url</key>
+			<string>https://travis-ci.com/dashboard</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>onlyShowEnabledInPrefs</key>
 	<true/>
