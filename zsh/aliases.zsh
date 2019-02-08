@@ -23,6 +23,9 @@ alias gco="git checkout"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gl="git log"
+alias gb="git branch"
+alias gf="git fetch"
+alias grc="git rebase --continue"
 
 # List not released commits yet
 function glr () {
