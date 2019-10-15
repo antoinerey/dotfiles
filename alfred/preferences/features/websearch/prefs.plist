@@ -78,7 +78,7 @@
 			<key>text</key>
 			<string>Search Jira for '{query}'</string>
 			<key>url</key>
-			<string>https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=60&amp;projectKey=CORE&amp;search={query}&amp;assignee=antoine.rey</string>
+			<string>https://backmarket.atlassian.net/jira/software/projects/CPROJ/boards/87?text={query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
@@ -91,7 +91,7 @@
 			<key>text</key>
 			<string>Open Jira</string>
 			<key>url</key>
-			<string>https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=60&amp;projectKey=CORE&amp;assignee=antoine.rey</string>
+			<string>https://backmarket.atlassian.net/jira/software/projects/CPROJ/boards/87</string>
 			<key>utf8</key>
 			<true/>
 		</dict>

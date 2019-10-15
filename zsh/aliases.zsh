@@ -4,6 +4,7 @@ alias f="fuck"
 alias ff="fuck --yes"
 alias k="kubectl"
 alias c="clear"
+alias rm="rm -rf"
 
 # yarn
 alias y="yarn"
@@ -22,7 +23,7 @@ alias gds="git diff --ignore-space-change --staged"
 alias gco="git checkout"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-alias gl="git log"
+alias gl="git log --format='%Cgreen%H%Creset %s - %Cblue%an%Creset'"
 alias gb="git branch"
 alias gf="git fetch"
 alias grc="git rebase --continue"
@@ -30,15 +31,15 @@ alias grc="git rebase --continue"
 # List not released commits yet
 function glr () {
   git fetch --tags
-  git log --oneline --no-merges $(git describe --abbrev=0 --tags)...origin/master
+  git log --format="%Cgreen%h%Creset %s - %Cblue%an%Creset" --no-merges $(git describe --abbrev=0 --tags)...origin/master
 }
 
 # Create a pull request on Github
 function gpr () {
   local assignee="antoinerey"
-  local labels="Review%20%F0%9F%94%8D"
+  local labels="Need%20Review%20%F0%9F%94%8E"
   local branch=$(git symbolic-ref --short -q HEAD)
-  local repository="BackMarket/front"
+  local repository=$(git remote get-url origin  | sed 's/^git@github.com:/https:\/\/github.com\//; s/.git$//')
 
-  open "https://github.com/$repository/compare/$branch?expand=1&assignee=$assignee&labels=$labels"
+  open "$repository/compare/$branch?expand=1&assignee=$assignee&labels=$labels&body=$branch"
 }

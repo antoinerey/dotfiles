@@ -30,7 +30,7 @@
       "thickness" : 0
     },
     "search" : {
-      "paddingVertical" : 4,
+      "paddingVertical" : 3,
       "background" : "#231825FF",
       "spacing" : 8,
       "text" : {
@@ -42,19 +42,19 @@
       "backgroundSelected" : "#B3D7FFFF"
     },
     "scrollbar" : {
-      "color" : "#358188FF",
+      "color" : "#D71E5AFF",
       "thickness" : 2
     },
     "name" : "Pinky",
     "window" : {
       "color" : "#221724FF",
-      "paddingHorizontal" : 9,
+      "paddingHorizontal" : 0,
       "width" : 559,
       "borderPadding" : 0,
       "borderColor" : "#0000007F",
       "blur" : 15,
       "roundness" : 3,
-      "paddingVertical" : 8
+      "paddingVertical" : 6
     }
   }
 }

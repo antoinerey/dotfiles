@@ -49,6 +49,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -56,7 +58,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>dnd</string>
+				<string>dd</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -109,7 +111,7 @@ puts({ items: script_filter_items }.to_json)</string>
 			<key>uid</key>
 			<string>3E435725-836B-4634-BF9F-B8DBADDDEABF</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
