@@ -8,9 +8,22 @@ FILES=(
 
 # Commands to install using Brew.
 COMMANDS=(
+  go
   n
   thefuck
   yarn
+)
+
+CASKS=(
+  1password
+  alfred
+  firefox
+  iterm
+  karabiner-elements
+  keyboard-maestro
+  notion
+  spotify
+  visual-studio-code
 )
 
 # -------------------------------------------------------------------- #
@@ -46,3 +59,15 @@ for COMMAND in $COMMANDS; do
     echo "✔ $COMMAND is already installed.";
   fi
 done
+
+echo ""
+
+# Install casks.
+# for CASK in $CASKS; do
+#   if ! brew cask list $CASK &> /dev/null; then
+#     brew cask install $CASK;
+#     echo "✔ $CASK has been installed successfully.";
+#   else
+#     echo "✔ $CASK is already installed.";
+#   fi
+# done
