@@ -1,0 +1,103 @@
+{
+    ;; Keyboard shortcuts are defined in QWERTY.
+    ;;   :q -> :a
+    ;;   :m -> :comma
+    ;;   :w -> :z
+    ;;   :semicolon -> :m
+    ;;   ...
+
+    :profiles {
+        :goku {
+            :default true
+            :sim 100
+        }
+    }
+
+    :applications {
+        :firefox ["^org\\.mozilla\\.firefox$"]
+        :vscode ["^com\\.microsoft\\.VSCode(Insiders)?$"]
+    }
+
+    :templates {
+        :activate "osascript -e 'tell application \"%s\" to activate'"
+        :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+        :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
+        :notion "open notion://%s"
+    }
+
+    :simlayers {
+        :a-mode {:key :q} ;; -> a
+        :b-mode {:key :b}
+        :e-mode {:key :e}
+        :i-mode {:key :i}
+        :o-mode {:key :o}
+        :s-mode {:key :s}
+        :w-mode {:key :z}
+    }
+
+    :main [
+        {
+            :des "hyper-mode (global)"
+            :rules [
+                [:caps_lock :left_control]
+                [:!Tj :down_arrow]
+                [:!Tk :up_arrow]
+                [:!Th :left_arrow]
+                [:!Tl :right_arrow]
+            ]
+        }
+        {
+            :des "a-mode (alfred)"
+            :rules [:a-mode
+                [:d [:alfred "search duckduckgo" "net.deanishe.alfred-searchio"]]
+                [:g [:alfred "search github" "me.lachlan.githubjump"]]
+            ]
+        }
+        {
+            :des "b-mode (backmarket)"
+            :rules [:b-mode
+                [:d "open https://github.com/backmarket/design-system"]
+                [:f "open https://github.com/backmarket/front"]
+                [:j "open \"https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=107&projectKey=NAV&assignee=5a8b07c25c7a2233512ac788\""]
+                [:s "open https://github.com/backmarket/front-scripts"]
+            ]
+        }
+        {
+            :des "e-mode (edit)"
+            :rules [:e-mode
+                [:q [:km "Edit: Bash Aliases"]] ;; :a
+                [:d [:km "Edit: Dotfiles"]]
+                [:k [:km "Edit: Karabiner Configuration"]]
+                [:r [:km "Edit: Clone Repository"] :firefox]
+            ]
+        }
+        {
+            :des "i-mode (insert)"
+            :rules [:i-mode
+                [:c [:c :o :n :s :o :l :e :!Scomma :l :o :g :5 :hyphen :left_arrow] :vscode] ;; console.log()
+                [:r [:non_us_backslash :d :e :p :e :n :d :q :b :o :t :spacebar :r :e :b :q :s :e] :firefox] ;; @dependabot rebase
+                [:s [:non_us_backslash :d :e :p :e :n :d :q :b :o :t :spacebar :s :a :u :q :s :h :spacebar :q :n :d :spacebar :semicolon :e :r :g :e] :firefox] ;; @dependabot squash and merge
+            ]
+        }
+        {
+            :des "o-mode (applications)"
+            :rules [:o-mode
+                [:c [:activate "Visual Studio Code - Insiders"]]
+                [:f [:activate "Firefox"]]
+                [:n [:activate "Notion"]]
+                [:p [:activate "Spotify"]]
+                [:s [:activate "Slack"]]
+                [:t [:activate "iTerm"]]
+                [:w [:activate "zoom.us"]]
+            ]
+        }
+        {
+            :des "s-mode (save)"
+            :rules [:s-mode
+                [:d [:km "Commit: Dotfiles"]]
+                [:k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
+                [:semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting
+            ]
+        }
+    ]
+}
