@@ -58,16 +58,11 @@ ZSH_CUSTOM=~/.dotfiles/zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z kubectl)
+plugins=(z)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# You may need to manually set your language environment
-# Fixes: https://github.com/zeit/hyper/issues/2328
-export LANG=en_US.UTF-8
-export EDITOR="code -w"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

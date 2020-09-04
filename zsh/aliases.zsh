@@ -1,3 +1,6 @@
+alias n="sudo n"
+alias code="code-insiders"
+
 # unix
 alias ll="ls -lA"
 alias f="fuck"
@@ -23,23 +26,22 @@ alias gds="git diff --ignore-space-change --staged"
 alias gco="git checkout"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-alias gl="git log --format='%Cgreen%H%Creset %s - %Cblue%an%Creset'"
+alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gb="git branch"
 alias gf="git fetch"
 alias grc="git rebase --continue"
 
-# List not released commits yet
-function glr () {
-  git fetch --tags
-  git log --format="%Cgreen%h%Creset %s - %Cblue%an%Creset" --no-merges $(git describe --abbrev=0 --tags)...origin/master
-}
-
 # Create a pull request on Github
 function gpr () {
   local assignee="antoinerey"
-  local labels="Need%20Review%20%F0%9F%94%8E"
   local branch=$(git symbolic-ref --short -q HEAD)
   local repository=$(git remote get-url origin  | sed 's/^git@github.com:/https:\/\/github.com\//; s/.git$//')
 
   open "$repository/compare/$branch?expand=1&assignee=$assignee&labels=$labels&body=$branch"
+}
+
+function jira () {
+  local branch=$(git symbolic-ref --short -q HEAD)
+
+  open "https://backmarket.atlassian.net/browse/$branch"
 }

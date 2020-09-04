@@ -1,35 +1,36 @@
 #!/bin/bash
 
+# Files to symlink to the home directory.
+FILES=(.zshrc)
+
+# Commands to install using Brew.
+COMMANDS=(n thefuck yarn)
+
+# -------------------------------------------------------------------- #
+
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Install Homebrew
 if ! [ -x "$(command -v brew)" ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+else
+  echo "✔ brew is already installed.";
 fi
 
-# Link files located in `./files
-for file in $(ls -A ${BASEDIR}/files); do
-  if [ ! -f ~/$file ]; then
-    ln -s ${BASEDIR}/files/$file ~/$file
+# Link configuration files
+for FILE in $FILES; do
+  if [ ! -f ~/$FILE ]; then
+    ln -s ${BASEDIR}/files/$FILE ~/$FILE;
+  else
+    echo "✔ $FILE is already linked.";
   fi
 done
 
-# Link Alfred preferences
-ln -s ${BASEDIR}/alfred ~/Alfred.alfredpreferences
-
-# Install commands listed in `./config/commands`
-for command in $(cat ${BASEDIR}/config/commands); do
-  if ! brew list $command &> /dev/null; then
-    brew install $command
+# Install commands.
+for COMMAND in $COMMANDS; do
+  if ! brew list $COMMAND &> /dev/null; then
+    brew install $COMMAND;
+  else
+    echo "✔ $COMMAND is already installed.";
   fi
 done
-
-# Install applications listed in `./config/casks`
-for cask in $(cat ${BASEDIR}/config/casks); do
-  if ! brew cask list $cask &> /dev/null; then
-    brew cask install $cask
-  fi
-done
-
-# Setup MacOS configuration
-bash ./macos.sh
