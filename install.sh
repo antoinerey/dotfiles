@@ -12,17 +12,18 @@ COMMANDS=(
   n
   thefuck
   yarn
+  yqrashawn/goku/goku
 )
 
 CASKS=(
-  1password
-  alfred
-  firefox
-  iterm
-  karabiner-elements
-  keyboard-maestro
-  notion
-  spotify
+  # 1password
+  # alfred
+  # firefox
+  # iterm
+  # karabiner-elements
+  # keyboard-maestro
+  # notion
+  # spotify
   visual-studio-code
 )
 
@@ -63,11 +64,17 @@ done
 echo ""
 
 # Install casks.
-# for CASK in $CASKS; do
-#   if ! brew cask list $CASK &> /dev/null; then
-#     brew cask install $CASK;
-#     echo "✔ $CASK has been installed successfully.";
-#   else
-#     echo "✔ $CASK is already installed.";
-#   fi
-# done
+for CASK in $CASKS; do
+  if ! brew cask list $CASK &> /dev/null; then
+    brew cask install $CASK;
+    echo "✔ $CASK has been installed successfully.";
+  else
+    echo "✔ $CASK is already installed.";
+  fi
+done
+
+echo ""
+
+# Register Goku service to launch at login.
+# See: https://github.com/yqrashawn/GokuRakuJoudo#usage
+brew services restart yqrashawn/goku/goku

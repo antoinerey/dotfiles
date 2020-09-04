@@ -1,5 +1,4 @@
 alias n="sudo n"
-alias code="code-insiders"
 
 # unix
 alias ll="ls -lA"
