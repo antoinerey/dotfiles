@@ -4,11 +4,13 @@
 FILES=(
   .config/karabiner.edn
   .config/starship.toml
+  .gitconfig
   .zshrc
 )
 
 # Commands to install using Brew.
 COMMANDS=(
+  diff-so-fancy
   go
   n
   starship
