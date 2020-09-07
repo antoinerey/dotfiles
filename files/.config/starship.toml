@@ -1,5 +1,5 @@
 [git_status]
-# deleted = ""
+deleted = ""
 
 [nodejs]
 disabled = true
