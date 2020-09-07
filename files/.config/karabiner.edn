@@ -15,7 +15,7 @@
 
     :applications {
         :firefox ["^org\\.mozilla\\.firefox$"]
-        :vscode ["^com\\.microsoft\\.VSCode(Insiders)?$"]
+        :vscode ["^com\\.microsoft\\.VSCode$"]
     }
 
     :templates {
@@ -82,7 +82,7 @@
         {
             :des "o-mode (applications)"
             :rules [:o-mode
-                [:c [:activate "Visual Studio Code - Insiders"]]
+                [:c [:activate "Visual Studio Code"]]
                 [:f [:activate "Firefox"]]
                 [:n [:activate "Notion"]]
                 [:p [:activate "Spotify"]]
