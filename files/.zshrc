@@ -7,7 +7,7 @@ export ZSH=/Users/$(whoami)/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="custom"
+# ZSH_THEME="custom"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -71,3 +71,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Set the infamous `fuck` command
 eval "$(thefuck --alias fuck)"
+
+# Initialise Startship prompt
+# See: https://starship.rs
+eval "$(starship init zsh)"

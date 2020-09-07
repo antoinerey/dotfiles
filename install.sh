@@ -3,6 +3,7 @@
 # Files to symlink to the home directory.
 FILES=(
   .config/karabiner.edn
+  .config/starship.toml
   .zshrc
 )
 
@@ -10,6 +11,7 @@ FILES=(
 COMMANDS=(
   go
   n
+  starship
   thefuck
   yarn
   yqrashawn/goku/goku
