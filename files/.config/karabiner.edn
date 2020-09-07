@@ -9,7 +9,7 @@
     :profiles {
         :goku {
             :default true
-            :sim 100
+            :sim 50
         }
     }
 

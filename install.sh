@@ -22,7 +22,7 @@ CASKS=(
   # iterm
   # karabiner-elements
   # keyboard-maestro
-  # notion
+  notion
   # spotify
   visual-studio-code
 )
