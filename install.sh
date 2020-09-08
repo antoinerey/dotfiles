@@ -22,7 +22,7 @@ COMMANDS=(
 CASKS=(
   # 1password
   # alfred
-  # firefox
+  firefox
   # iterm
   karabiner-elements
   # keyboard-maestro
