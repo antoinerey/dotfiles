@@ -27,7 +27,7 @@ CASKS=(
   # karabiner-elements
   # keyboard-maestro
   notion
-  # spotify
+  spotify
   visual-studio-code
 )
 
