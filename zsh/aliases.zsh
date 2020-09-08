@@ -34,6 +34,7 @@ alias grc="git rebase --continue"
 function gpr () {
   local assignee="antoinerey"
   local branch=$(git symbolic-ref --short -q HEAD)
+  local labels="Waiting for QA"
   local repository=$(git remote get-url origin  | sed 's/^git@github.com:/https:\/\/github.com\//; s/.git$//')
 
   open "$repository/compare/$branch?expand=1&assignee=$assignee&labels=$labels&body=$branch"
