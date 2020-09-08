@@ -12,3 +12,7 @@ Some steps are not automated (yet).
 - Keyboard Maestro
   - Import macros from the `macros.kmmacros` file
   - Set `ENV_PATH` variable
+
+### TODO
+
+- [ ] Automatically export Keyboard Maestro macros.
