@@ -24,7 +24,7 @@ CASKS=(
   # alfred
   # firefox
   # iterm
-  # karabiner-elements
+  karabiner-elements
   # keyboard-maestro
   notion
   spotify
