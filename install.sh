@@ -25,7 +25,7 @@ CASKS=(
   firefox
   # iterm
   karabiner-elements
-  # keyboard-maestro
+  keyboard-maestro
   notion
   spotify
   visual-studio-code

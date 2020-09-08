@@ -9,3 +9,6 @@ Some steps are not automated (yet).
 - Karabiner
   - Create a new `goku` profile
   - Hide the menu bar icon (from the `misc` settings)
+- Keyboard Maestro
+  - Import macros from the `macros.kmmacros` file
+  - Set `ENV_PATH` variable
