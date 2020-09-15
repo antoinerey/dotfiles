@@ -65,7 +65,7 @@
         {
             :des "e-mode (edit)"
             :rules [:e-mode
-                [:q [:km "Edit: Bash Aliases"]] ;; :a
+                [:q [:km "Edit: Bash Aliases"]] ;; -> :a
                 [:d [:km "Edit: Dotfiles"]]
                 [:k [:km "Edit: Karabiner Configuration"]]
                 [:r [:km "Edit: Clone Repository"] :firefox]
@@ -74,9 +74,10 @@
         {
             :des "i-mode (insert)"
             :rules [:i-mode
-                [:c [:c :o :n :s :o :l :e :!Scomma :l :o :g :5 :hyphen :left_arrow] :vscode] ;; console.log()
-                [:r [:non_us_backslash :d :e :p :e :n :d :q :b :o :t :spacebar :r :e :b :q :s :e] :firefox] ;; @dependabot rebase
-                [:s [:non_us_backslash :d :e :p :e :n :d :q :b :o :t :spacebar :s :a :u :q :s :h :spacebar :q :n :d :spacebar :semicolon :e :r :g :e] :firefox] ;; @dependabot squash and merge
+                [:c [:km "Insert: Console Log"]]
+                [:r [:km "Dependabot: Rebase"] :firefox]
+                [:s [:km "Dependabot: Squash and Merge"] :firefox]
+                [:j [:km "Insert: JIRA Ticket URL"]]
             ]
         }
         {
