@@ -82,3 +82,7 @@ echo ""
 # Register Goku service to launch at login.
 # See: https://github.com/yqrashawn/GokuRakuJoudo#usage
 brew services restart yqrashawn/goku/goku
+
+# Show dotfiles in Finder.
+defaults write com.apple.finder AppleShowAllFiles true
+killall Finder
