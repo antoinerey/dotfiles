@@ -11,6 +11,7 @@ FILES=(
 # Commands to install using Brew.
 COMMANDS=(
   diff-so-fancy
+  gh
   go
   n
   starship
@@ -79,10 +80,15 @@ done
 
 echo ""
 
+# Show dotfiles in Finder.
+defaults write com.apple.finder AppleShowAllFiles true
+echo "✔ Dotfiles shown in Finder"
+
+echo ""
+
 # Register Goku service to launch at login.
 # See: https://github.com/yqrashawn/GokuRakuJoudo#usage
 brew services restart yqrashawn/goku/goku
 
-# Show dotfiles in Finder.
-defaults write com.apple.finder AppleShowAllFiles true
+# Finalise some settings enabling
 killall Finder

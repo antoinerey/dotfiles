@@ -49,6 +49,7 @@
         {
             :des "a-mode (alfred)"
             :rules [:a-mode
+                [:c [:alfred "search calendar" "net.deanishe.alfred.gcal"]]
                 [:d [:alfred "search duckduckgo" "net.deanishe.alfred-searchio"]]
                 [:g [:alfred "search github" "me.lachlan.githubjump"]]
             ]
@@ -80,18 +81,18 @@
                 [:j [:km "Insert: JIRA Ticket URL"]]
             ]
         }
-        {
-            :des "o-mode (applications)"
-            :rules [:o-mode
-                [:c [:activate "Visual Studio Code"]]
-                [:f [:activate "Firefox"]]
-                [:n [:activate "Notion"]]
-                [:p [:activate "Spotify"]]
-                [:s [:activate "Slack"]]
-                [:t [:activate "iTerm"]]
-                [:w [:activate "zoom.us"]]
-            ]
-        }
+        ; {
+        ;     :des "o-mode (applications)"
+        ;     :rules [:o-mode
+        ;         [:c [:activate "Visual Studio Code"]]
+        ;         [:f [:activate "Firefox"]]
+        ;         [:n [:activate "Notion"]]
+        ;         [:p [:activate "Spotify"]]
+        ;         [:s [:activate "Slack"]]
+        ;         [:t [:activate "iTerm"]]
+        ;         [:w [:activate "zoom.us"]]
+        ;     ]
+        ; }
         {
             :des "s-mode (save)"
             :rules [:s-mode
