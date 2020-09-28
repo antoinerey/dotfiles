@@ -86,6 +86,12 @@ echo "✔ Dotfiles shown in Finder"
 
 echo ""
 
+gh config set git_protocol ssh
+gh config set editor "code --wait"
+echo "✔ gh configured"
+
+echo ""
+
 # Register Goku service to launch at login.
 # See: https://github.com/yqrashawn/GokuRakuJoudo#usage
 brew services restart yqrashawn/goku/goku
