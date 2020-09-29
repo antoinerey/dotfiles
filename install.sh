@@ -13,6 +13,7 @@ COMMANDS=(
   diff-so-fancy
   gh
   go
+  jq
   n
   starship
   thefuck
