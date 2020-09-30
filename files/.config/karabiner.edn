@@ -9,6 +9,7 @@
     :profiles {
         :goku {
             :default true
+            :delay 0
             :sim 50
         }
     }
@@ -25,7 +26,7 @@
         :notion "open notion://%s"
     }
 
-    :simlayers {
+    :layers {
         :a-mode {:key :q} ;; -> a
         :b-mode {:key :b}
         :e-mode {:key :e}
@@ -39,11 +40,10 @@
         {
             :des "hyper-mode (global)"
             :rules [
-                [:caps_lock :left_control]
-                [:!Tj :down_arrow]
-                [:!Tk :up_arrow]
-                [:!Th :left_arrow]
-                [:!Tl :right_arrow]
+                [:caps_lock :!SCOleft_control]
+                [:!!k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
+                [:!!semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting (m)
+                [:!!sd [:activate "iTerm"]]
             ]
         }
         ; {
@@ -96,9 +96,10 @@
         {
             :des "s-mode (save)"
             :rules [:s-mode
-                [:d [:km "Commit: Dotfiles"]]
-                [:k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
-                [:semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting
+                [:!!d [:activate "iTerm"]]
+                ; [:d [:km "Commit: Dotfiles"]]
+                ; [:k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
+                ; [:semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting
             ]
         }
     ]
