@@ -30,9 +30,11 @@
                 [:!!2 [:activate "Visual Studio Code"]]
                 [:!!3 [:activate "iTerm"]]
 
+                [:!!d [:km "Edit: Dotfiles"]]
+                [:!!s [:km "Commit: Dotfiles"]]
+
                 [:!!semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting (m)
                 [:!!k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
-                [:!!s [:km "Commit: Dotfiles"]]
             ]
         }
     ]
