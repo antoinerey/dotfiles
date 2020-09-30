@@ -14,92 +14,25 @@
         }
     }
 
-    :applications {
-        :firefox ["^org\\.mozilla\\.firefox$"]
-        :vscode ["^com\\.microsoft\\.VSCode$"]
-    }
-
     :templates {
         :activate "osascript -e 'tell application \"%s\" to activate'"
-        :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
         :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
         :notion "open notion://%s"
     }
 
-    :layers {
-        :a-mode {:key :q} ;; -> a
-        :b-mode {:key :b}
-        :e-mode {:key :e}
-        :i-mode {:key :i}
-        :o-mode {:key :o}
-        :s-mode {:key :s}
-        :w-mode {:key :z}
-    }
-
     :main [
         {
-            :des "hyper-mode (global)"
+            :des "Hyper mode"
             :rules [
-                [:caps_lock :!SCOleft_control]
-                [:!!k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
+                [:caps_lock [:!SCOleft_control]]
+
+                [:!!1 [:activate "Firefox"]]
+                [:!!2 [:activate "Visual Studio Code"]]
+                [:!!3 [:activate "iTerm"]]
+
                 [:!!semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting (m)
-                [:!!sd [:activate "iTerm"]]
-            ]
-        }
-        ; {
-        ;     :des "a-mode (alfred)"
-        ;     :rules [:a-mode
-        ;         [:c [:alfred "search calendar" "net.deanishe.alfred.gcal"]]
-        ;         [:d [:alfred "search duckduckgo" "net.deanishe.alfred-searchio"]]
-        ;         [:g [:alfred "search github" "me.lachlan.githubjump"]]
-        ;     ]
-        ; }
-        ; {
-        ;     :des "b-mode (backmarket)"
-        ;     :rules [:b-mode
-        ;         [:d "open https://github.com/backmarket/design-system"]
-        ;         [:f "open https://github.com/backmarket/front"]
-        ;         [:j "open \"https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=107&projectKey=NAV&assignee=5a8b07c25c7a2233512ac788\""]
-        ;         [:s "open https://github.com/backmarket/front-scripts"]
-        ;     ]
-        ; }
-        {
-            :des "e-mode (edit)"
-            :rules [:e-mode
-                [:q [:km "Edit: Bash Aliases"]] ;; -> :a
-                [:d [:km "Edit: Dotfiles"]]
-                [:k [:km "Edit: Karabiner Configuration"]]
-                ; [:r [:km "Edit: Clone Repository"] :firefox]
-            ]
-        }
-        {
-            :des "i-mode (insert)"
-            :rules [:i-mode
-                [:c [:km "Insert: Console Log"]]
-                [:r [:km "Dependabot: Rebase"] :firefox]
-                [:s [:km "Dependabot: Squash and Merge"] :firefox]
-                [:j [:km "Insert: JIRA Ticket URL"]]
-            ]
-        }
-        ; {
-        ;     :des "o-mode (applications)"
-        ;     :rules [:o-mode
-        ;         [:c [:activate "Visual Studio Code"]]
-        ;         [:f [:activate "Firefox"]]
-        ;         [:n [:activate "Notion"]]
-        ;         [:p [:activate "Spotify"]]
-        ;         [:s [:activate "Slack"]]
-        ;         [:t [:activate "iTerm"]]
-        ;         [:w [:activate "zoom.us"]]
-        ;     ]
-        ; }
-        {
-            :des "s-mode (save)"
-            :rules [:s-mode
-                [:!!d [:activate "iTerm"]]
-                ; [:d [:km "Commit: Dotfiles"]]
-                ; [:k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
-                ; [:semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting
+                [:!!k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
+                [:!!s [:km "Commit: Dotfiles"]]
             ]
         }
     ]
