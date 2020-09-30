@@ -46,30 +46,30 @@
                 [:!Tl :right_arrow]
             ]
         }
-        {
-            :des "a-mode (alfred)"
-            :rules [:a-mode
-                [:c [:alfred "search calendar" "net.deanishe.alfred.gcal"]]
-                [:d [:alfred "search duckduckgo" "net.deanishe.alfred-searchio"]]
-                [:g [:alfred "search github" "me.lachlan.githubjump"]]
-            ]
-        }
-        {
-            :des "b-mode (backmarket)"
-            :rules [:b-mode
-                [:d "open https://github.com/backmarket/design-system"]
-                [:f "open https://github.com/backmarket/front"]
-                [:j "open \"https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=107&projectKey=NAV&assignee=5a8b07c25c7a2233512ac788\""]
-                [:s "open https://github.com/backmarket/front-scripts"]
-            ]
-        }
+        ; {
+        ;     :des "a-mode (alfred)"
+        ;     :rules [:a-mode
+        ;         [:c [:alfred "search calendar" "net.deanishe.alfred.gcal"]]
+        ;         [:d [:alfred "search duckduckgo" "net.deanishe.alfred-searchio"]]
+        ;         [:g [:alfred "search github" "me.lachlan.githubjump"]]
+        ;     ]
+        ; }
+        ; {
+        ;     :des "b-mode (backmarket)"
+        ;     :rules [:b-mode
+        ;         [:d "open https://github.com/backmarket/design-system"]
+        ;         [:f "open https://github.com/backmarket/front"]
+        ;         [:j "open \"https://backmarket.atlassian.net/secure/RapidBoard.jspa?rapidView=107&projectKey=NAV&assignee=5a8b07c25c7a2233512ac788\""]
+        ;         [:s "open https://github.com/backmarket/front-scripts"]
+        ;     ]
+        ; }
         {
             :des "e-mode (edit)"
             :rules [:e-mode
                 [:q [:km "Edit: Bash Aliases"]] ;; -> :a
                 [:d [:km "Edit: Dotfiles"]]
                 [:k [:km "Edit: Karabiner Configuration"]]
-                [:r [:km "Edit: Clone Repository"] :firefox]
+                ; [:r [:km "Edit: Clone Repository"] :firefox]
             ]
         }
         {
