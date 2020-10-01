@@ -26,6 +26,7 @@
             :rules [
                 [:caps_lock [:!SCOleft_control]]
 
+                [:!!non_us_backslash [:activate "Slack"]]
                 [:!!1 [:activate "Firefox"]]
                 [:!!2 [:activate "Visual Studio Code"]]
                 [:!!3 [:activate "iTerm"]]
