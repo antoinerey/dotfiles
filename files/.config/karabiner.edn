@@ -15,7 +15,6 @@
     }
 
     :templates {
-        :activate "osascript -e 'tell application \"%s\" to activate'"
         :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
         :notion "open notion://%s"
     }
@@ -25,11 +24,6 @@
             :des "Hyper mode"
             :rules [
                 [:caps_lock [:!SCOleft_control]]
-
-                [:!!non_us_backslash [:activate "Slack"]]
-                [:!!1 [:activate "Firefox"]]
-                [:!!2 [:activate "Visual Studio Code"]]
-                [:!!3 [:activate "iTerm"]]
 
                 [:!!d [:km "Edit: Dotfiles"]]
                 [:!!s [:km "Commit: Dotfiles"]]
