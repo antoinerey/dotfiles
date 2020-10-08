@@ -14,6 +14,10 @@
         }
     }
 
+    :applications {
+        :iterm ["^com\\.googlecode\\.iterm2$"]
+    }
+
     :templates {
         :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
         :notion "open notion://%s"
@@ -24,6 +28,8 @@
             :des "Hyper mode"
             :rules [
                 [:caps_lock [:!SCOleft_control]]
+
+                [:!!c [:!Tc] :iterm]
 
                 [:!!d [:km "Edit: Dotfiles"]]
                 [:!!s [:km "Commit: Dotfiles"]]
