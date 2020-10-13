@@ -30,4 +30,4 @@ alias gb="git branch"
 alias gf="git fetch"
 alias grc="git rebase --continue"
 
-source ./aliases.bm.zsh
+source $(dirname $0)/aliases.bm.zsh
