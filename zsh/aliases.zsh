@@ -30,6 +30,4 @@ alias gb="git branch"
 alias gf="git fetch"
 alias grc="git rebase --continue"
 
-if [ -f ./aliases.bm.zsh ]; then
-  source ./aliases.bm.zsh
-fi
+source ./aliases.bm.zsh
