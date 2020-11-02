@@ -5,6 +5,7 @@ FILES=(
   .config/karabiner.edn
   .config/starship.toml
   .gitconfig
+  .hushlogin
   .zshrc
 )
 
