@@ -29,9 +29,11 @@ CASKS=(
   karabiner-elements
   keyboard-maestro
   notion
+  slack
   spectacle
   spotify
   visual-studio-code
+  zoomus
 )
 
 # -------------------------------------------------------------------- #
@@ -42,6 +44,15 @@ if ! [ -x "$(command -v brew)" ]; then
   echo "✔ brew has been installed successfully.";
 else
   echo "✔ brew is already installed.";
+fi
+
+# Install oh-my-zsh
+if [ ! -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  rm ~/.zshrc
+  echo "✔ oh-my-zsh has been installed successfully"
+else
+  echo "✔ oh-my-zsh is already installed"
 fi
 
 echo ""
@@ -85,17 +96,21 @@ echo ""
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
 echo "✔ Switched to dark mode"
 
+defaults write com.apple.finder QuitMenuItem -bool true
+echo "✔ Finder may be quit"
+
 defaults write com.apple.finder AppleShowAllFiles true
 echo "✔ Dotfiles shown in Finder"
 
 defaults write com.apple.dock tilesize -integer 24
-echo "✔ Dock size set"
+echo "✔ Dock size configured"
 
 defaults write com.apple.dock static-only -bool true
 echo "✔ Dock now only show active applications"
 
-killall Dock
-echo "✔ Dock configured"
+defaults write -g InitialKeyRepeat -int 5
+defaults write -g KeyRepeat -int 1
+echo "✔ Key repeat rate configured"
 
 echo ""
 
@@ -111,3 +126,4 @@ brew services restart yqrashawn/goku/goku
 
 # Finalise some settings enabling
 killall Finder
+killall Dock
