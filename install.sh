@@ -22,13 +22,14 @@ COMMANDS=(
 )
 
 CASKS=(
-  # 1password
-  # alfred
+  1password
+  alfred
   firefox
-  # iterm
+  iterm2
   karabiner-elements
   keyboard-maestro
   notion
+  spectacle
   spotify
   visual-studio-code
 )
@@ -37,7 +38,7 @@ CASKS=(
 
 # Install Homebrew
 if ! [ -x "$(command -v brew)" ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
   echo "✔ brew has been installed successfully.";
 else
   echo "✔ brew is already installed.";
@@ -81,9 +82,20 @@ done
 
 echo ""
 
-# Show dotfiles in Finder.
+osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+echo "✔ Switched to dark mode"
+
 defaults write com.apple.finder AppleShowAllFiles true
 echo "✔ Dotfiles shown in Finder"
+
+defaults write com.apple.dock tilesize -integer 24
+echo "✔ Dock size set"
+
+defaults write com.apple.dock static-only -bool true
+echo "✔ Dock now only show active applications"
+
+killall Dock
+echo "✔ Dock configured"
 
 echo ""
 

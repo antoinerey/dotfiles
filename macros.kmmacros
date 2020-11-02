@@ -6,7 +6,101 @@
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>620730551.61716199</real>
+		<real>626023471.43021905</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>ENV_PATH</string>
+									<key>VariableConditionType</key>
+									<string>Exists</string>
+									<key>VariableValue</key>
+									<string>value</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Source</key>
+								<string>Nothing</string>
+								<key>Text</key>
+								<string>echo /usr/local/bin:$PATH;</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>ENV_PATH</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>DisplayBriefly</string>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>Text</key>
+								<string>Variable ENV_PATH is already set.</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>626024004.42966402</real>
+				<key>ModificationDate</key>
+				<real>626024117.89416599</real>
+				<key>Name</key>
+				<string>Setup: ENV_PATH variable</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>3B6DB479-1701-494F-BFC4-7C7EC212F78E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>ToggleMacroUID</key>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
+		<key>UID</key>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>626023471.43021905</real>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -26,10 +120,7 @@
 						<key>Source</key>
 						<string>Nothing</string>
 						<key>Text</key>
-						<string>cd ~/.dotfiles
-git add .
-git commit -m "Update"
-git push</string>
+						<string>code ~/.dotfiles/zsh/aliases.zsh</string>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 						<key>TrimResults</key>
@@ -41,29 +132,29 @@ git push</string>
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>620942497.07930303</real>
+				<real>620748463.44984698</real>
 				<key>ModificationDate</key>
-				<real>620942589.2895</real>
+				<real>620946428.44877803</real>
 				<key>Name</key>
-				<string>Commit: Dotfiles</string>
+				<string>Edit: Bash Aliases</string>
 				<key>Triggers</key>
 				<array/>
 				<key>UID</key>
-				<string>AA40ADE0-4911-4958-8519-631EC4383F2F</string>
+				<string>A60179A8-4B77-494B-B68B-BDB63DC2A1C0</string>
 			</dict>
 		</array>
 		<key>Name</key>
 		<string>Global Macro Group</string>
 		<key>ToggleMacroUID</key>
-		<string>B4184019-0A80-4B2B-AC6D-ACB2026FE25E</string>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
 		<key>UID</key>
-		<string>8CA8694F-4D43-48F2-BE3A-DA69EF841FDA</string>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>620730551.61716199</real>
+		<real>626023471.43021905</real>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -177,123 +268,15 @@ code ~/Code/clones/$repository
 		<key>Name</key>
 		<string>Global Macro Group</string>
 		<key>ToggleMacroUID</key>
-		<string>B4184019-0A80-4B2B-AC6D-ACB2026FE25E</string>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
 		<key>UID</key>
-		<string>8CA8694F-4D43-48F2-BE3A-DA69EF841FDA</string>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
 	</dict>
 	<dict>
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>620730551.61716199</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Window</string>
-						<key>HonourFailureSettings</key>
-						<true/>
-						<key>IncludeStdErr</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>Path</key>
-						<string></string>
-						<key>Source</key>
-						<string>Nothing</string>
-						<key>Text</key>
-						<string>code ~/.dotfiles</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>TrimResultsNew</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>620937574.67601395</real>
-				<key>ModificationDate</key>
-				<real>620946438.22567797</real>
-				<key>Name</key>
-				<string>Edit: Dotfiles</string>
-				<key>Triggers</key>
-				<array/>
-				<key>UID</key>
-				<string>AD5D2701-62E3-4311-8CD2-D86DD38C2F4B</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>ToggleMacroUID</key>
-		<string>B4184019-0A80-4B2B-AC6D-ACB2026FE25E</string>
-		<key>UID</key>
-		<string>8CA8694F-4D43-48F2-BE3A-DA69EF841FDA</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>620730551.61716199</real>
-		<key>Macros</key>
-		<array>
-			<dict>
-				<key>Actions</key>
-				<array>
-					<dict>
-						<key>DisplayKind</key>
-						<string>Window</string>
-						<key>HonourFailureSettings</key>
-						<true/>
-						<key>IncludeStdErr</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>ExecuteShellScript</string>
-						<key>Path</key>
-						<string></string>
-						<key>Source</key>
-						<string>Nothing</string>
-						<key>Text</key>
-						<string>code ~/.dotfiles/zsh/aliases.zsh</string>
-						<key>TimeOutAbortsMacro</key>
-						<true/>
-						<key>TrimResults</key>
-						<true/>
-						<key>TrimResultsNew</key>
-						<true/>
-						<key>UseText</key>
-						<true/>
-					</dict>
-				</array>
-				<key>CreationDate</key>
-				<real>620748463.44984698</real>
-				<key>ModificationDate</key>
-				<real>620946428.44877803</real>
-				<key>Name</key>
-				<string>Edit: Bash Aliases</string>
-				<key>Triggers</key>
-				<array/>
-				<key>UID</key>
-				<string>A60179A8-4B77-494B-B68B-BDB63DC2A1C0</string>
-			</dict>
-		</array>
-		<key>Name</key>
-		<string>Global Macro Group</string>
-		<key>ToggleMacroUID</key>
-		<string>B4184019-0A80-4B2B-AC6D-ACB2026FE25E</string>
-		<key>UID</key>
-		<string>8CA8694F-4D43-48F2-BE3A-DA69EF841FDA</string>
-	</dict>
-	<dict>
-		<key>Activate</key>
-		<string>Normal</string>
-		<key>CreationDate</key>
-		<real>620730551.61716199</real>
+		<real>626023471.43021905</real>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -339,9 +322,120 @@ code ~/Code/clones/$repository
 		<key>Name</key>
 		<string>Global Macro Group</string>
 		<key>ToggleMacroUID</key>
-		<string>B4184019-0A80-4B2B-AC6D-ACB2026FE25E</string>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
 		<key>UID</key>
-		<string>8CA8694F-4D43-48F2-BE3A-DA69EF841FDA</string>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>626023471.43021905</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>code ~/.dotfiles</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>620937574.67601395</real>
+				<key>ModificationDate</key>
+				<real>620946438.22567797</real>
+				<key>Name</key>
+				<string>Edit: Dotfiles</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>AD5D2701-62E3-4311-8CD2-D86DD38C2F4B</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>ToggleMacroUID</key>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
+		<key>UID</key>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>626023471.43021905</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Window</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>cd ~/.dotfiles
+git add .
+git commit -m "Update"
+git push</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>620942497.07930303</real>
+				<key>ModificationDate</key>
+				<real>620942589.2895</real>
+				<key>Name</key>
+				<string>Commit: Dotfiles</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>AA40ADE0-4911-4958-8519-631EC4383F2F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>ToggleMacroUID</key>
+		<string>9CB183EA-F596-4ED8-8E9B-7DECEDF79DB7</string>
+		<key>UID</key>
+		<string>A942B776-6C30-4DB0-AB94-88AC7F1AD618</string>
 	</dict>
 </array>
 </plist>
