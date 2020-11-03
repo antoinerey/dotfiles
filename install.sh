@@ -28,6 +28,7 @@ CASKS=(
   alfred
   firefox
   iterm2
+  kap
   karabiner-elements
   keyboard-maestro
   notion

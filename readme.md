@@ -2,6 +2,8 @@ Here are my own dotfiles.
 
 Some steps are not automated (yet).
 
+- MacOS
+  - Activate Trackpad drag'n drop with 3 fingers
 - Alfred
   - Set the license
   - Set the shortcut to `Hyper` + `Space`
@@ -14,6 +16,7 @@ Some steps are not automated (yet).
 - iTerm 2
   - Disable confirmation when quitting
   - Set the correct theme
+  - Emulate US keyboards (so `Cmd` + `number` switches tab)
 - Karabiner
   - Create a new `goku` profile
   - Hide the menu bar icon (from the `misc` settings)
@@ -26,6 +29,7 @@ Some steps are not automated (yet).
   - Change the fullscreen shortcut to `Cmd` + `Shift` + `Enter`
 - Visual Studio Code
   - Install shell command
+  - Set `eslint.runtime` to the value of `which node`
 
 ### TODO
 
