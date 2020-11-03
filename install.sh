@@ -15,6 +15,7 @@ COMMANDS=(
   gh
   go
   jq
+  mas
   n
   starship
   thefuck
@@ -35,6 +36,10 @@ CASKS=(
   spotify
   visual-studio-code
   zoomus
+)
+
+APPS=(
+  1284863847 # Unsplash Wallpapers
 )
 
 # -------------------------------------------------------------------- #
@@ -89,6 +94,18 @@ for CASK in $CASKS; do
     echo "✔ $CASK has been installed successfully.";
   else
     echo "✔ $CASK is already installed.";
+  fi
+done
+
+echo ""
+
+# Install applications from App Store.
+for APP in $APPS; do
+  if ! mas list | grep $APP &> /dev/null; then
+    mas install $APP;
+    echo "✔ $APP has been installed successfully.";
+  else
+    echo "✔ $APP is already installed.";
   fi
 done
 
