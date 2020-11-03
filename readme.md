@@ -13,6 +13,7 @@ Some steps are not automated (yet).
   - Install [GithubDark](https://github.com/StylishThemes/Github-Dark)
 - iTerm 2
   - Disable confirmation when quitting
+  - Set the correct theme
 - Karabiner
   - Create a new `goku` profile
   - Hide the menu bar icon (from the `misc` settings)
@@ -20,6 +21,7 @@ Some steps are not automated (yet).
   - Import macros from the `macros.kmmacros` file
   - Set `ENV_PATH` variable
 - Spectacle
+  - Launch at startup
   - Set the application to run in background (to remove the icon from the menu bar)
   - Change the fullscreen shortcut to `Cmd` + `Shift` + `Enter`
 - Visual Studio Code

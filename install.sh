@@ -112,7 +112,7 @@ echo "✔ Dock now only show active applications"
 defaults write -g ApplePressAndHoldEnabled -bool false
 echo "✔ Long keypress action disabled"
 
-defaults write -g InitialKeyRepeat -int 10
+defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 1
 echo "✔ Key repeat rate configured"
 
