@@ -75,3 +75,5 @@ eval "$(thefuck --alias fuck)"
 # Initialise Startship prompt
 # See: https://starship.rs
 eval "$(starship init zsh)"
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/bit bit

@@ -13,6 +13,7 @@ FILES=(
 COMMANDS=(
   diff-so-fancy
   gh
+  git-lfs
   go
   jq
   mas
