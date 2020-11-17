@@ -1,6 +1,7 @@
 # TODO: How can I generate autocompletion?
 function bm {
   local command=$1
+  local argument=$2
 
   if [ $command = "list" ]; then
     gh pr status
@@ -11,16 +12,16 @@ function bm {
   fi
 
   if [ $command = "ready" ]; then
-    local number=$(get_pr_number)
+    local number=${argument:-$(get_pr_number)}
 
-    gh pr ready
+    gh pr ready $number
 
     add_label $number "Validated by QA"
     remove_label $number "Waiting for QA"
   fi
 
   if [ $command = "done" ]; then
-    gh pr merge --squash
+    gh pr merge --squash $argument
     git pull # Once merged, we're back to the default branch
   fi
 
