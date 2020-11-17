@@ -35,7 +35,7 @@ function gco {
   if [ $ref = "-" ]; then
     git checkout $ref
   else
-    git checkout -b $1 2> /dev/null || git checkout $1;
+    git checkout -b $ref 2> /dev/null || git checkout $ref;
   fi
 }
 
