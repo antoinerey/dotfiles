@@ -30,6 +30,7 @@
                 [:caps_lock [:!SCOleft_control]]
 
                 [:!!c [:!Tc] :iterm]
+                [:!!d [:!Td] :iterm]
 
                 [:!!d [:km "Edit: Dotfiles"]]
                 [:!!s [:km "Commit: Dotfiles"]]

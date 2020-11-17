@@ -32,11 +32,7 @@ alias grc="git rebase --continue"
 function gco {
   local ref=$1
 
-  if [ $ref = "-" ]; then
-    git checkout $ref
-  else
-    git checkout -b $ref 2> /dev/null || git checkout $ref;
-  fi
+  git checkout $ref 2> /dev/null || git checkout -b $ref;
 }
 
 source $(dirname $0)/aliases.bm.zsh
