@@ -16,7 +16,7 @@ alias yad="yarn add --dev"
 alias yt="yarn test"
 
 # git
-alias gs="git status"
+alias gs="git status --short"
 alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit"
@@ -32,7 +32,7 @@ alias grc="git rebase --continue"
 function gco {
   local ref=$1
 
-  git checkout $ref 2> /dev/null || git checkout -b $ref;
+  git checkout $ref || git checkout -b $ref;
 }
 
 source $(dirname $0)/aliases.bm.zsh
