@@ -27,7 +27,7 @@
         {
             :des "Hyper mode"
             :rules [
-                [:caps_lock [:!SCOleft_control]]
+                [:caps_lock [:!SCOleft_control]] ;; Hyper key
 
                 [:!!c [:!Tc] :iterm]
                 [:!!d [:!Td] :iterm]
