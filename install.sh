@@ -11,6 +11,7 @@ FILES=(
 
 # Commands to install using Brew.
 COMMANDS=(
+  bat
   diff-so-fancy
   gh
   git-lfs
