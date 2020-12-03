@@ -31,3 +31,5 @@
 	process = git-lfs filter-process
 [diff-so-fancy]
 	markEmptyLines = false
+[init]
+	defaultBranch = main
