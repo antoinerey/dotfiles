@@ -15,7 +15,8 @@
     }
 
     :applications {
-        :iterm ["^com\\.googlecode\\.iterm2$"]
+        :iterm ["^com\\.googlecode\\.iterm2$"],
+        :vscode ["^com\\.microsoft\\.VSCode$"]
     }
 
     :templates {
@@ -30,6 +31,7 @@
                 [:caps_lock [:!SCOleft_control]] ;; Hyper key
 
                 [:!!c [:!Tc] :iterm]
+                [:!!c [:!Tc] :vscode]
 
                 [:!!d [:km "Edit: Dotfiles"]]
                 [:!!s [:km "Commit: Dotfiles"]]
