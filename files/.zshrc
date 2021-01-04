@@ -77,3 +77,9 @@ eval "$(thefuck --alias fuck)"
 eval "$(starship init zsh)"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/antoine/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/antoine/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/google-cloud-sdk/completion.zsh.inc'; fi

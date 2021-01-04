@@ -3,3 +3,6 @@ disabled = true
 
 [package]
 disabled = true
+
+[gcloud]
+disabled = true

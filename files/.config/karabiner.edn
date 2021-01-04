@@ -30,8 +30,10 @@
             :rules [
                 [:caps_lock [:!SCOleft_control]] ;; Hyper key
 
-                [:!!c [:!Tc] :iterm]
-                [:!!c [:!Tc] :vscode]
+                [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
+
+                [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
+                [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
 
                 [:!!d [:km "Edit: Dotfiles"]]
                 [:!!s [:km "Commit: Dotfiles"]]
