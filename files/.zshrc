@@ -83,3 +83,5 @@ if [ -f '/Users/antoine/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/antoine/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

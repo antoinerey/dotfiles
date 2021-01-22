@@ -32,6 +32,7 @@
 
                 [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
 
+                [:!!r [:!Tr] :iterm] ;; Look for previous commands
                 [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
                 [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
 

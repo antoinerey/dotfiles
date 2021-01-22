@@ -1,6 +1,7 @@
 [user]
 	name = Antoine Rey
 	email = antoine.rey@backmarket.com
+	signingkey = 26FC98B49A686DDB
 [core]
 	editor = code --wait
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -33,3 +34,7 @@
 	markEmptyLines = false
 [init]
 	defaultBranch = main
+
+# Automatically sign commits using the GPG key.
+[commit]
+	gpgsign = true

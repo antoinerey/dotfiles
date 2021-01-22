@@ -13,6 +13,7 @@ FILES=(
 COMMANDS=(
   bat
   diff-so-fancy
+  fzf
   gh
   git-lfs
   go
@@ -147,6 +148,12 @@ echo ""
 # Register Goku service to launch at login.
 # See: https://github.com/yqrashawn/GokuRakuJoudo#usage
 brew services restart yqrashawn/goku/goku
+echo "✔ goku configured"
+
+# Enable fzf auto-complete and key bindings.
+# See: https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
+$(brew --prefix)/opt/fzf/install
+echo "✔ fzf configured"
 
 # Finalise some settings enabling
 killall Finder
