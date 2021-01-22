@@ -93,8 +93,8 @@ echo ""
 
 # Install casks.
 for CASK in $CASKS; do
-  if ! brew cask list $CASK &> /dev/null; then
-    brew cask install $CASK;
+  if ! brew list --cask $CASK &> /dev/null; then
+    brew install --cask $CASK;
     echo "✔ $CASK has been installed successfully.";
   else
     echo "✔ $CASK is already installed.";
@@ -150,10 +150,14 @@ echo ""
 brew services restart yqrashawn/goku/goku
 echo "✔ goku configured"
 
+echo ""
+
 # Enable fzf auto-complete and key bindings.
 # See: https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
 $(brew --prefix)/opt/fzf/install
 echo "✔ fzf configured"
+
+echo ""
 
 # Finalise some settings enabling
 killall Finder
