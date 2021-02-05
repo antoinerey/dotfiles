@@ -92,3 +92,6 @@ fi
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh;
 fi
+
+export GOPATH=$HOME/Code/go
+export PATH=$PATH:$GOPATH/bin

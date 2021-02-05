@@ -22,6 +22,8 @@ COMMANDS=(
   n
   starship
   thefuck
+  tree
+  wget
   yarn
   yqrashawn/goku/goku
 )

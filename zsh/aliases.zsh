@@ -7,6 +7,7 @@ alias ff="fuck --yes"
 alias k="kubectl"
 alias c="clear"
 alias rm="rm -rf"
+alias cat="bat"
 
 # yarn
 alias y="yarn"
@@ -24,6 +25,7 @@ alias gd="git diff --ignore-space-change"
 alias gds="git diff --ignore-space-change --staged"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
+alias gpl="git pull"
 alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gb="git branch"
 
