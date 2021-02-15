@@ -35,7 +35,6 @@ CASKS=(
   iterm2
   kap
   karabiner-elements
-  keyboard-maestro
   notion
   slack
   spectacle
