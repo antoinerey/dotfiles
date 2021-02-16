@@ -11,8 +11,8 @@
 function convert {
   local value=$1
 
-  if [ $value -gt 1000 ]; then
-    value=$(echo "scale=2; $value/1000" | bc);
+  if [ $value -gt 1024 ]; then
+    value=$(echo "scale=2; $value / 1024" | bc);
     value=$(echo "$value kB")
   else
     value=$(echo "$value bytes")
