@@ -30,7 +30,6 @@ COMMANDS=(
 
 CASKS=(
   1password
-  alfred
   firefox
   iterm2
   kap
