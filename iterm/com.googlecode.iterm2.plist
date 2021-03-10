@@ -1907,6 +1907,8 @@
 			</array>
 		</dict>
 	</array>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SwitchTabModifier</key>
