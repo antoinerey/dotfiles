@@ -15,6 +15,7 @@ COMMANDS=(
   diff-so-fancy
   fzf
   gh
+  git
   git-lfs
   go
   jq
