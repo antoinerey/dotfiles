@@ -17,12 +17,7 @@
     :applications {
         :iterm ["^com\\.googlecode\\.iterm2$"],
         :vscode ["^com\\.microsoft\\.VSCode$"],
-        :bear ["^net\\.shinyfrog\\.bear$"]
-    }
-
-    :templates {
-        :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"
-        :notion "open notion://%s"
+        :craft ["^com\\.lukilabs\\.lukiapp$"]
     }
 
     :main [
@@ -40,21 +35,19 @@
                 [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
                 [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
 
-                ;; Switch Ctrl with Hyper key, which is simpler on macOS.
-                [:!!1 [:!T1] :bear]
-                [:!!2 [:!T2] :bear]
-                [:!!3 [:!T3] :bear]
+                [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
+                [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.
 
-                ;; Add more shortcuts to notes search to benefit from muscle memory.
-                ;; Also, make sure to search through all notes, and not only the selected tag.
-                [:!Cf [:!SC1 :!Cf] :bear]
-                [:!Cp [:!SC1 :!Cf] :bear]
-                [:!Ck [:!SC1 :!Cf] :bear]
-                [:!Co [:!SC1 :!Cf] :bear]
-
-                ;; [:!!semicolon [:notion "frontoine/Meetings-56f282db881742079f8ecc964d4d95c5"]] ;; Log a new meeting (m)
-                ;; [:!!k [:notion "antoinerey/Knowledge-bcd76a09baf24ba4bf28eee356560f08"]] ;; Update the knowledge page
-                ;; [:!!t [:notion "frontoine/98fe5abf95804183b660354d5cefce12"]] ;; Create a new todo entry
+                ;; Simpler to use `Cmd + [1-9]` than `Cmd + Shift + [1-9]`.
+                [:!C1 [:!CS1] :craft]
+                [:!C2 [:!CS2] :craft]
+                [:!C3 [:!CS3] :craft]
+                [:!C4 [:!CS4] :craft]
+                [:!C5 [:!CS5] :craft]
+                [:!C6 [:!CS6] :craft]
+                [:!C7 [:!CS7] :craft]
+                [:!C8 [:!CS8] :craft]
+                [:!C9 [:!CS9] :craft]
             ]
         }
     ]
