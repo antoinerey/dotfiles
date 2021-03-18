@@ -29,7 +29,7 @@
                 [:!!j [:down_arrow]]
                 [:!!k [:up_arrow]]
 
-                [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
+                ;; [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
 
                 [:!!r [:!Tr] :iterm] ;; Look for previous commands
                 [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
