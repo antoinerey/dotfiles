@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # @raycast.schemaVersion 1
-# @raycast.title MDN
+# @raycast.title Can I Use
 # @raycast.mode silent
 # @raycast.author Antoine Rey
-# @raycast.icon ../assets/mdn-light.png
-# @raycast.iconDark ../assets/mdn-dark.png
+# @raycast.icon ../assets/caniuse.png
 # @raycast.packageName Web Searches
 # @raycast.argument1 { "type": "text", "placeholder": "query", "percentEncoded": true }
 
-open "https://developer.mozilla.org/fr/search?q=${1}"
+open "https://caniuse.com/?search=${1}"
