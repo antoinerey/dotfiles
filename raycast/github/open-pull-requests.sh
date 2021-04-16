@@ -8,4 +8,4 @@
 # @raycast.iconDark ../assets/github-light.png
 # @raycast.packageName Github
 
-open "https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+archived%3Afalse+sort%3Aupdated-desc+author%3Aantoinerey+-label%3A%22Outrigger+-+Queued+for+release%22"
+open "https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+archived%3Afalse+sort%3Aupdated-desc+assignee%3Aantoinerey+-label%3A%22Outrigger+-+Queued+for+release%22"
