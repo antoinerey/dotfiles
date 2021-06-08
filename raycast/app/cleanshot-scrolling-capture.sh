@@ -1,17 +1,19 @@
 #!/bin/bash
 
+# Note: CleanShot X v3.5.1 required
+
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Restore Recently Closed File
+# @raycast.title Scrolling Capture
 # @raycast.mode silent
 
 # Optional parameters:
-# @raycast.icon ../assets/cleanshot-restore.png
+# @raycast.icon ../assets/scrolling-capture.png
 # @raycast.packageName CleanShot X
 
 # Documentation:
 # @raycast.author CleanShot X
 # @raycast.authorURL https://twitter.com/CleanShot_app
-# @raycast.description Restore the recently closed file.
+# @raycast.description Capture any scrollable content.
 
-open "cleanshot://restore-recently-closed"
+open "cleanshot://scrolling-capture"

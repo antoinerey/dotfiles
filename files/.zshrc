@@ -95,3 +95,5 @@ fi
 
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:./node_modules/.bin

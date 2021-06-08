@@ -2,16 +2,16 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Restore Recently Closed File
+# @raycast.title Record Screen
 # @raycast.mode silent
 
 # Optional parameters:
-# @raycast.icon ../assets/cleanshot-restore.png
+# @raycast.icon ../assets/cleanshot-record-screen.png
 # @raycast.packageName CleanShot X
 
 # Documentation:
 # @raycast.author CleanShot X
 # @raycast.authorURL https://twitter.com/CleanShot_app
-# @raycast.description Restore the recently closed file.
+# @raycast.description Start a screen recording and save it as a video or an optimized GIF file.
 
-open "cleanshot://restore-recently-closed"
+open "cleanshot://record-screen"
