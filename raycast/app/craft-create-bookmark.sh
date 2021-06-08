@@ -14,4 +14,4 @@ spaceId=6e679756-2b50-cda7-07a3-68c1974cfc5e
 url=$(osascript -e 'tell app "brave" to get the url of the active tab of window 1')
 
 open "craftdocs://createblock?parentBlockId=$parentBlockId&spaceId=$spaceId&content=$url&index=0"
-osascript -e 'tell application "brave" to activate'
+# osascript -e 'tell application "brave" to activate'
