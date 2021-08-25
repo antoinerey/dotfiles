@@ -28,6 +28,8 @@
 
                 [:!!j [:down_arrow]]
                 [:!!k [:up_arrow]]
+                [:!!h [:left_arrow]]
+                [:!!l [:right_arrow]]
 
                 ;; [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
 

@@ -8,6 +8,7 @@ alias k="kubectl"
 alias c="clear"
 alias rm="rm -rf"
 alias cat="bat"
+alias code="code -r"
 
 # yarn
 alias y="yarn"
