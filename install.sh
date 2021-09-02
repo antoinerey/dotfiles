@@ -13,6 +13,7 @@ FILES=(
 COMMANDS=(
   bat
   diff-so-fancy
+  exa
   fzf
   gh
   git
