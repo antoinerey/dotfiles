@@ -1,7 +1,8 @@
 alias n="sudo n"
 
 # unix
-alias ll="ls -lA"
+alias l="exa -la --no-user"
+alias ll="exa -la --no-user"
 alias f="fuck"
 alias ff="fuck --yes"
 alias k="kubectl"
