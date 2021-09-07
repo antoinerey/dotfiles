@@ -1,0 +1,56 @@
+{
+    ;; Keyboard shortcuts are defined in QWERTY.
+    ;;   :q -> :a
+    ;;   :m -> :comma
+    ;;   :w -> :z
+    ;;   :semicolon -> :m
+    ;;   ...
+
+    :profiles {
+        :goku {
+            :default true
+            :delay 0
+            :sim 50
+        }
+    }
+
+    :applications {
+        :iterm ["^com\\.googlecode\\.iterm2$"],
+        :vscode ["^com\\.microsoft\\.VSCode$"],
+        :craft ["^com\\.lukilabs\\.lukiapp$"]
+    }
+
+    :main [
+        {
+            :des "Hyper mode"
+            :rules [
+                [:caps_lock [:!SCOleft_control]] ;; Hyper key
+
+                [:!!j [:down_arrow]]
+                [:!!k [:up_arrow]]
+                [:!!h [:left_arrow]]
+                [:!!l [:right_arrow]]
+
+                ;; [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
+
+                [:!!r [:!Tr] :iterm] ;; Look for previous commands
+                [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
+                [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
+
+                [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
+                [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.
+
+                ;; Simpler to use `Cmd + [1-9]` than `Cmd + Shift + [1-9]`.
+                [:!C1 [:!CS1] :craft]
+                [:!C2 [:!CS2] :craft]
+                [:!C3 [:!CS3] :craft]
+                [:!C4 [:!CS4] :craft]
+                [:!C5 [:!CS5] :craft]
+                [:!C6 [:!CS6] :craft]
+                [:!C7 [:!CS7] :craft]
+                [:!C8 [:!CS8] :craft]
+                [:!C9 [:!CS9] :craft]
+            ]
+        }
+    ]
+}

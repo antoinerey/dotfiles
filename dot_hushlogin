@@ -1,0 +1,2 @@
+# This file is here to prevent logging the last login date & time.
+# See: https://www.cyberciti.biz/howto/turn-off-the-login-banner-in-linux-unix-with-hushlogin-file
