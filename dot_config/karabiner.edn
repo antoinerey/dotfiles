@@ -24,14 +24,12 @@
         {
             :des "Hyper mode"
             :rules [
-                [:caps_lock [:!SCOleft_control]] ;; Hyper key
+                [:caps_lock [:!SCOleft_control] nil {:alone :escape}] ;; Hyper key
 
                 [:!!j [:down_arrow]]
                 [:!!k [:up_arrow]]
                 [:!!h [:left_arrow]]
                 [:!!l [:right_arrow]]
-
-                ;; [:!Ca [] :iterm] ;; Cmd+q - Prevent quitting iTerm
 
                 [:!!r [:!Tr] :iterm] ;; Look for previous commands
                 [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
