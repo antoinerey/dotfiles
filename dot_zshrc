@@ -30,7 +30,14 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# We do not want ZSH to automatically compute the terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Set the current terminal title to the current working directory. 
+function precmd () {
+  window_title="\033]0;${PWD##*/}\007"
+  echo -ne "$window_title"
+}
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -91,3 +98,9 @@ fi
 export EDITOR="code --wait"
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin:./node_modules/.bin
+
+# Set the current window title to the current working directory. 
+function precmd () {
+  window_title="\033]0;${PWD##*/}\007"
+  echo -ne "$window_title"
+}

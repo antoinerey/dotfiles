@@ -18,6 +18,7 @@
         :iterm ["^com\\.googlecode\\.iterm2$"],
         :vscode ["^com\\.microsoft\\.VSCode$"],
         :craft ["^com\\.lukilabs\\.lukiapp$"]
+        :kitty ["^net\\.kovidgoyal\\.kitty$"]
     }
 
     :main [
@@ -32,8 +33,10 @@
                 [:!!l [:right_arrow]]
 
                 [:!!r [:!Tr] :iterm] ;; Look for previous commands
+                [:!!r [:!Tr] :kitty] ;; Look for previous commands
                 [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
                 [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
+                [:!!c [:!Tc] :kitty] ;; Ctrl+C is quite common in terminals
 
                 [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
                 [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.
