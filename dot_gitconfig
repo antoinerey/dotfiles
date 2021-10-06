@@ -48,3 +48,6 @@
 # Automatically sign commits using the GPG key.
 [commit]
 	gpgsign = true
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/

@@ -33,7 +33,7 @@ HYPHEN_INSENSITIVE="true"
 # We do not want ZSH to automatically compute the terminal title.
 DISABLE_AUTO_TITLE="true"
 
-# Set the current terminal title to the current working directory. 
+# Set the current terminal title to the current working directory.
 function precmd () {
   window_title="\033]0;${PWD##*/}\007"
   echo -ne "$window_title"
@@ -99,8 +99,20 @@ export EDITOR="code --wait"
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin:./node_modules/.bin
 
-# Set the current window title to the current working directory. 
+# Set the current window title to the current working directory.
 function precmd () {
   window_title="\033]0;${PWD##*/}\007"
   echo -ne "$window_title"
+}
+
+# Aliases
+
+alias grep=rg
+
+alias gcom='git checkout $(git_default_branch)'
+alias gplm='git pull origin $(git_default_branch)'
+
+# See https://joshtronic.com/2020/08/09/how-to-get-the-default-git-branch.
+git_default_branch() {
+  (git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') 2>/dev/null
 }

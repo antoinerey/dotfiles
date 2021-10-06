@@ -15,10 +15,11 @@
     }
 
     :applications {
-        :iterm ["^com\\.googlecode\\.iterm2$"],
-        :vscode ["^com\\.microsoft\\.VSCode$"],
+        :iterm ["^com\\.googlecode\\.iterm2$"]
+        :vscode ["^com\\.microsoft\\.VSCode$"]
         :craft ["^com\\.lukilabs\\.lukiapp$"]
         :kitty ["^net\\.kovidgoyal\\.kitty$"]
+        :brave ["^com\\.brave\\.Browser$"]
     }
 
     :main [
@@ -51,6 +52,9 @@
                 [:!C7 [:!CS7] :craft]
                 [:!C8 [:!CS8] :craft]
                 [:!C9 [:!CS9] :craft]
+
+                ;; Tab palette in Brave.
+                [:!Ck [:!CSq] :brave]
             ]
         }
     ]
