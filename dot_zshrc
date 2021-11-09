@@ -109,6 +109,10 @@ function precmd () {
 
 alias grep=rg
 
+alias p=pnpm
+alias y=yarn
+alias w=z # On QWERTY keyboard, Z is too hard to type frequently.
+
 alias gcom='git checkout $(git_default_branch)'
 alias gplm='git pull origin $(git_default_branch)'
 

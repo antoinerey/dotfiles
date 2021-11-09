@@ -20,6 +20,7 @@
         :craft ["^com\\.lukilabs\\.lukiapp$"]
         :kitty ["^net\\.kovidgoyal\\.kitty$"]
         :brave ["^com\\.brave\\.Browser$"]
+        :warp ["^dev\\.warp\\.Warp-Stable$"]
     }
 
     :main [
@@ -33,11 +34,13 @@
                 [:!!h [:left_arrow]]
                 [:!!l [:right_arrow]]
 
-                [:!!r [:!Tr] :iterm] ;; Look for previous commands
-                [:!!r [:!Tr] :kitty] ;; Look for previous commands
-                [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
                 [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
+                [:!!r [:!Tr] :iterm] ;; Look for previous commands
+                [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
+                [:!!r [:!Tr] :kitty] ;; Look for previous commands
                 [:!!c [:!Tc] :kitty] ;; Ctrl+C is quite common in terminals
+                [:!!r [:!Tr] :warp] ;; Look for previous commands
+                [:!!c [:!Tc] :warp] ;; Ctrl+C is quite common in terminals
 
                 [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
                 [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.
@@ -52,9 +55,6 @@
                 [:!C7 [:!CS7] :craft]
                 [:!C8 [:!CS8] :craft]
                 [:!C9 [:!CS9] :craft]
-
-                ;; Tab palette in Brave.
-                [:!Ck [:!CSq] :brave]
             ]
         }
     ]
