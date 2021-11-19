@@ -33,12 +33,6 @@ HYPHEN_INSENSITIVE="true"
 # We do not want ZSH to automatically compute the terminal title.
 DISABLE_AUTO_TITLE="true"
 
-# Set the current terminal title to the current working directory.
-function precmd () {
-  window_title="\033]0;${PWD##*/}\007"
-  echo -ne "$window_title"
-}
-
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -56,7 +50,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.dotfiles/zsh
+# ZSH_CUSTOM=~/.dotfiles/zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -92,31 +86,3 @@ fi
 
 # The next line enables shell command completion using fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Environment variables
-
-export EDITOR="code --wait"
-export GOPATH=$HOME/Code/go
-export PATH=$PATH:$GOPATH/bin:./node_modules/.bin
-
-# Set the current window title to the current working directory.
-function precmd () {
-  window_title="\033]0;${PWD##*/}\007"
-  echo -ne "$window_title"
-}
-
-# Aliases
-
-alias grep=rg
-
-alias p=pnpm
-alias y=yarn
-alias w=z # On QWERTY keyboard, Z is too hard to type frequently.
-
-alias gcom='git checkout $(git_default_branch)'
-alias gplm='git pull origin $(git_default_branch)'
-
-# See https://joshtronic.com/2020/08/09/how-to-get-the-default-git-branch.
-git_default_branch() {
-  (git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') 2>/dev/null
-}

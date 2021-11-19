@@ -1,3 +1,9 @@
 # Dotfiles
 
-Managed with [chezmoi](https://www.chezmoi.io).
+My own dotfiles.
+
+## Installation
+
+```zsh
+chmod +x install.sh && ./install.sh
+```

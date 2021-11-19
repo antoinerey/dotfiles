@@ -45,8 +45,8 @@
 [init]
 	defaultBranch = main
 
-# Automatically sign commits using the GPG key.
 [commit]
+  # Automatically sign commits using the GPG key.
 	gpgsign = true
 
 [url "ssh://git@github.com/"]
