@@ -6,6 +6,7 @@
 [core]
 	editor = code --wait
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /Users/antoine/.config/git/.gitignore
 
 [pull]
 	rebase = true
@@ -48,7 +49,7 @@
 [commit]
   # Automatically sign commits using the GPG key.
 	gpgsign = true
-	template = /Users/antoine/.config/.git-commit.tpl
+	template = /Users/antoine/.config/git/.git-commit.tpl
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/

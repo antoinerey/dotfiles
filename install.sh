@@ -13,8 +13,10 @@ ln -s $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+mkdir -p ~/.config/git
 ln -s $(pwd)/git/.gitconfig ~/.gitconfig
-ln -s $(pwd)/git/.git-commit.tpl ~/.config/.git-commit.tpl
+ln -s $(pwd)/git/.gitignore ~/.config/git/.gitignore
+ln -s $(pwd)/git/.git-commit.tpl ~/.config/git/.git-commit.tpl
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other

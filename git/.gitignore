@@ -1,0 +1,7 @@
+# See https://github.com/github/gitignore to get inspired.
+
+# MacOS
+.DS_Store
+
+# IntelliJ
+.idea
