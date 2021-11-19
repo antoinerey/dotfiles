@@ -1,0 +1,74 @@
+{
+  "name": "raycast-github",
+  "title": "Github (Custom)",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "antoinerey",
+  "license": "MIT",
+  "dependencies": {
+    "@raycast/api": "^1.25.0",
+    "octokit": "^1.7.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "commands": [
+    {
+      "name": "search_default_organisation_repositories",
+      "title": "Search Repositories",
+      "subtitle": "",
+      "description": "",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "token",
+          "type": "password",
+          "required": true,
+          "title": "Github Token",
+          "description": "Your Github token used to communicate with the API"
+        },
+        {
+          "name": "organisation",
+          "type": "textfield",
+          "required": true,
+          "title": "Github Organisation",
+          "description": "The default Github organisation"
+        }
+      ]
+    },
+    {
+      "name": "search_pull_requests_to_review",
+      "title": "List Pull Requests to Review",
+      "subtitle": "",
+      "description": "",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "token",
+          "type": "password",
+          "required": true,
+          "title": "Github Token",
+          "description": "Your Github token used to communicate with the API"
+        },
+        {
+          "name": "username",
+          "type": "textfield",
+          "required": true,
+          "title": "Github Username",
+          "description": "Your Github username"
+        }
+      ]
+    }
+  ]
+}
