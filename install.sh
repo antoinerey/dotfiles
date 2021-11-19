@@ -14,6 +14,7 @@ ln -s $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 ln -s $(pwd)/git/.gitconfig ~/.gitconfig
+ln -s $(pwd)/git/.git-commit.tpl ~/.config/.git-commit.tpl
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other

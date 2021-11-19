@@ -48,6 +48,7 @@
 [commit]
   # Automatically sign commits using the GPG key.
 	gpgsign = true
+	template = /Users/antoine/.config/.git-commit.tpl
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
