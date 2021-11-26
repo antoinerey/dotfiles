@@ -58,21 +58,28 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(z)
 
+# Source `.zshrc.local` if it exists. Useful to store secrets that should not be
+# exposed online. Note that it must be sourced before `oh-my-zsh` so that
+# environment variables are set when aliases are defined from `alias.zsh`.
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Initialise Startship prompt
 # See: https://starship.rs
 eval "$(starship init zsh)"
 
-# The next line updates PATH for the Google Cloud SDK.
+# Updates PATH for the Google Cloud SDK.
 if [ -f '/Users/antoine/google-cloud-sdk/path.zsh.inc' ]; then
   source '/Users/antoine/google-cloud-sdk/path.zsh.inc';
 fi
 
-# The next line enables shell command completion for gcloud.
+# Enables shell command completion for gcloud.
 if [ -f '/Users/antoine/google-cloud-sdk/completion.zsh.inc' ]; then
   source '/Users/antoine/google-cloud-sdk/completion.zsh.inc';
 fi
 
-# The next line enables shell command completion using fzf.
+# Enables shell command completion using fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

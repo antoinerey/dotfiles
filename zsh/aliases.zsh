@@ -16,6 +16,7 @@ alias code="code -r"
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+alias git="git -c user.signingKey=$GIT_CONFIG_USER_SIGNINGKEY"
 alias g="git"
 alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gd="git diff --ignore-space-change"

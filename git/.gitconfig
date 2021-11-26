@@ -1,7 +1,6 @@
 [user]
 	name = Antoine Rey
 	email = antoine.rey@backmarket.com
-	signingKey = 10467AABFD872B87
 
 [core]
 	editor = code --wait
