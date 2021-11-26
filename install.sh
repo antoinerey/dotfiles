@@ -2,29 +2,35 @@
 # ZSH
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -s $(pwd)/zsh/.zshrc ~/.zshrc
+if [ ! -d ~/.oh-my-zsh ]; then
+  # Install oh-my-zsh.
+  # See https://ohmyz.sh.
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+ln -Fs $(pwd)/zsh/.zshrc ~/.zshrc
 
 # Any file symlinked to ZSH custom directory will be automatically sourced.
 # See https://github.com/ohmyzsh/ohmyzsh/issues/4865#issuecomment-401121707.
-ln -s $(pwd)/zsh/aliases.zsh $ZSH/custom/aliases.zsh
-ln -s $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
+ln -Fs $(pwd)/zsh/aliases.zsh $ZSH/custom/aliases.zsh
+ln -Fs $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 mkdir -p ~/.config/git
-ln -s $(pwd)/git/.gitconfig ~/.gitconfig
-ln -s $(pwd)/git/.gitignore ~/.config/git/.gitignore
-ln -s $(pwd)/git/.git-commit.tpl ~/.config/git/.git-commit.tpl
+ln -Fs $(pwd)/git/.gitconfig ~/.gitconfig
+ln -Fs $(pwd)/git/.gitignore ~/.config/git/.gitignore
+ln -Fs $(pwd)/git/.git-commit.tpl ~/.config/git/.git-commit.tpl
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -s $(pwd)/other/.hushlogin    ~/.hushlogin
-ln -s $(pwd)/other/karabiner.edn ~/.config/karabiner.edn
-ln -s $(pwd)/other/starship.toml ~/.config/starship.toml
+ln -Fs $(pwd)/other/.hushlogin    ~/.hushlogin
+ln -Fs $(pwd)/other/karabiner.edn ~/.config/karabiner.edn
+ln -Fs $(pwd)/other/starship.toml ~/.config/starship.toml
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Brew
@@ -55,9 +61,34 @@ $(brew --prefix)/opt/fzf/install --key-bindings --completion --update-rc
 echo "✔ fzf configured"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Platform Specific
+# MacOS Settings
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  chmod +x $(pwd)/install.mac.sh && ./install.mac.sh
-fi
+osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+echo "✔ Switched to dark mode"
+
+defaults write com.apple.finder QuitMenuItem -bool true
+echo "✔ Finder may be quit"
+
+defaults write com.apple.finder AppleShowAllFiles true
+echo "✔ Dotfiles shown in Finder"
+
+defaults write com.apple.dock tilesize -integer 24
+echo "✔ Dock size configured"
+
+defaults write com.apple.dock static-only -bool true
+echo "✔ Dock now only show active applications"
+
+defaults write -g ApplePressAndHoldEnabled -bool false
+echo "✔ Long keypress action disabled"
+
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 1
+echo "✔ Key repeat rate configured"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Teardown
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+killall Finder
+killall Dock
