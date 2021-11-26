@@ -4,6 +4,14 @@ My own dotfiles.
 
 ## Installation
 
+First, install `oh-my-zsh`.
+
+```zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Then, clone this repository, and run the install script.
+
 ```zsh
 git clone https://github.com/antoinerey/dotfiles.git
 cd dotfiles

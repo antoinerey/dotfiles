@@ -2,12 +2,6 @@
 # ZSH
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-if [ ! -d ~/.oh-my-zsh ]; then
-  # Install oh-my-zsh.
-  # See https://ohmyz.sh.
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
 ln -Fs $(pwd)/zsh/.zshrc ~/.zshrc
 
 # Any file symlinked to ZSH custom directory will be automatically sourced.
@@ -20,17 +14,25 @@ ln -Fs $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 mkdir -p ~/.config/git
-ln -Fs $(pwd)/git/.gitconfig ~/.gitconfig
-ln -Fs $(pwd)/git/.gitignore ~/.config/git/.gitignore
+ln -Fs $(pwd)/git/.gitconfig      ~/.gitconfig
+ln -Fs $(pwd)/git/.gitignore      ~/.config/git/.gitignore
 ln -Fs $(pwd)/git/.git-commit.tpl ~/.config/git/.git-commit.tpl
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Kitty
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+mkdir -p ~/.config/kitty
+ln -Fs $(pwd)/kitty/kitty.conf    ~/.config/kitty/kitty.conf
+ln -Fs $(pwd)/kitty/dracula.conf  ~/.config/kitty/dracula.conf
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -Fs $(pwd)/other/.hushlogin    ~/.hushlogin
 ln -Fs $(pwd)/other/karabiner.edn ~/.config/karabiner.edn
 ln -Fs $(pwd)/other/starship.toml ~/.config/starship.toml
+ln -Fs $(pwd)/other/.hushlogin    ~/.hushlogin
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Brew
@@ -79,12 +81,28 @@ echo "✔ Dock size configured"
 defaults write com.apple.dock static-only -bool true
 echo "✔ Dock now only show active applications"
 
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.3
+defaults write com.apple.dock autohide -bool true
+echo "✔ Dock automatically hidden"
+
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+echo "✔ Menu bar automatically hidden"
+
 defaults write -g ApplePressAndHoldEnabled -bool false
 echo "✔ Long keypress action disabled"
 
-defaults write -g InitialKeyRepeat -int 15
+defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 echo "✔ Key repeat rate configured"
+
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+echo "✔ Tap to click configured"
+
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+echo "✔ “Are you sure you want to open this application?” dialog disabled"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Teardown

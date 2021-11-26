@@ -1,7 +1,7 @@
 [user]
 	name = Antoine Rey
 	email = antoine.rey@backmarket.com
-	signingkey = 26FC98B49A686DDB
+	signingKey = 10467AABFD872B87
 
 [core]
 	editor = code --wait
@@ -47,9 +47,8 @@
 	defaultBranch = main
 
 [commit]
-  # Automatically sign commits using the GPG key.
-	gpgsign = true
 	template = /Users/antoine/.config/git/.git-commit.tpl
+	gpgSign = true
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
