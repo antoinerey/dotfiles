@@ -58,11 +58,11 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(z)
 
-# Source `.zshrc.local` if it exists. Useful to store secrets that should not be
+# Source `secret.zsh` if it exists. Useful to store secrets that should not be
 # exposed online. Note that it must be sourced before `oh-my-zsh` so that
 # environment variables are set when aliases are defined from `alias.zsh`.
-if [ -f ~/.zshrc.local ]; then
-  source ~/.zshrc.local
+if [ -f $ZSH/custom/secret.zsh ]; then
+  source $ZSH/custom/secret.zsh
 fi
 
 source $ZSH/oh-my-zsh.sh
