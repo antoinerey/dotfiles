@@ -1,39 +1,41 @@
+#!/bin/sh
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # ZSH
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -Fs $(pwd)/zsh/.zshrc ~/.zshrc
+ln -Fs "$(pwd)/zsh/.zshrc" ~/.zshrc
 
 # Any file symlinked to ZSH custom directory will be automatically sourced.
 # See https://github.com/ohmyzsh/ohmyzsh/issues/4865#issuecomment-401121707.
-ln -Fs $(pwd)/zsh/aliases.zsh $ZSH/custom/aliases.zsh
-ln -Fs $(pwd)/zsh/env.zsh     $ZSH/custom/env.zsh
-ln -Fs $(pwd)/zsh/secret.zsh  $ZSH/custom/secret.zsh
+ln -Fs "$(pwd)/zsh/aliases.zsh" "$ZSH/custom/aliases.zsh"
+ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
+ln -Fs "$(pwd)/zsh/secret.zsh"  "$ZSH/custom/secret.zsh"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 mkdir -p ~/.config/git
-ln -Fs $(pwd)/git/.gitconfig      ~/.gitconfig
-ln -Fs $(pwd)/git/.gitignore      ~/.config/git/.gitignore
-ln -Fs $(pwd)/git/.git-commit.tpl ~/.config/git/.git-commit.tpl
+ln -Fs "$(pwd)/git/.gitconfig"      ~/.gitconfig
+ln -Fs "$(pwd)/git/.gitignore"      ~/.config/git/.gitignore
+ln -Fs "$(pwd)/git/.git-commit.tpl" ~/.config/git/.git-commit.tpl
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Kitty
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 mkdir -p ~/.config/kitty
-ln -Fs $(pwd)/kitty/kitty.conf    ~/.config/kitty/kitty.conf
-ln -Fs $(pwd)/kitty/dracula.conf  ~/.config/kitty/dracula.conf
+ln -Fs "$(pwd)/kitty/kitty.conf"    ~/.config/kitty/kitty.conf
+ln -Fs "$(pwd)/kitty/dracula.conf"  ~/.config/kitty/dracula.conf
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -Fs $(pwd)/other/karabiner.edn ~/.config/karabiner.edn
-ln -Fs $(pwd)/other/starship.toml ~/.config/starship.toml
-ln -Fs $(pwd)/other/.hushlogin    ~/.hushlogin
+ln -Fs "$(pwd)/other/karabiner.edn" ~/.config/karabiner.edn
+ln -Fs "$(pwd)/other/starship.toml" ~/.config/starship.toml
+ln -Fs "$(pwd)/other/.hushlogin"    ~/.hushlogin
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Brew
@@ -43,7 +45,7 @@ if ! [ -x "$(command -v brew)" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-brew bundle install --file $(pwd)/other/Brewfile --no-lock
+brew bundle install --file "$(pwd)/other/Brewfile" --no-lock
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Applications
@@ -60,7 +62,7 @@ echo "✔ goku configured"
 
 # Enable fzf auto-complete and key bindings.
 # See: https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
-$(brew --prefix)/opt/fzf/install --key-bindings --completion --update-rc
+"$(brew --prefix)/opt/fzf/install" --key-bindings --completion --update-rc
 echo "✔ fzf configured"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -103,7 +105,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 echo "✔ Tap to click configured"
 
 defaults write com.apple.LaunchServices LSQuarantine -bool false
-echo "✔ “Are you sure you want to open this application?” dialog disabled"
+echo "✔ 'Are you sure you want to open this application?' dialog disabled"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Teardown

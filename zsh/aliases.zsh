@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias c="clear"
 alias l="exa -lah"
 alias ll="l"

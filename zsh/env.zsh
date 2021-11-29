@@ -1,4 +1,6 @@
-export PATH=$PATH:./node_modules/.bin
+#!/bin/zsh
+
+export PATH="$PATH:./node_modules/.bin"
 export EDITOR="code --wait"
 
 # Make sure gpg is able to sign commits.
