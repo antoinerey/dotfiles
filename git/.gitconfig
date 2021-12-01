@@ -5,7 +5,7 @@
 [core]
 	editor = code --wait
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	excludesfile = /Users/antoine/.config/git/.gitignore
+	excludesfile = ~/.config/git/.gitignore
 
 [pull]
 	rebase = true
@@ -46,7 +46,7 @@
 	defaultBranch = main
 
 [commit]
-	template = /Users/antoine/.config/git/.git-commit.tpl
+	template = ~/.config/git/.git-commit.tpl
 	gpgSign = true
 
 [url "ssh://git@github.com/"]
