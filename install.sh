@@ -10,7 +10,10 @@ ln -Fs "$(pwd)/zsh/.zshrc" ~/.zshrc
 # See https://github.com/ohmyzsh/ohmyzsh/issues/4865#issuecomment-401121707.
 ln -Fs "$(pwd)/zsh/aliases.zsh" "$ZSH/custom/aliases.zsh"
 ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
-ln -Fs "$(pwd)/zsh/secret.zsh"  "$ZSH/custom/secret.zsh"
+
+if [ -f "$(pwd)/zsh/secret.zsh" ]; then
+  ln -Fs "$(pwd)/zsh/secret.zsh"  "$ZSH/custom/secret.zsh"
+fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
