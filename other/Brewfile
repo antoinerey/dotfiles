@@ -18,16 +18,16 @@ brew "git-lfs"
 brew "go"
 brew "jq"
 brew "n"
-brew "pnpm", args: ["--without-node"]
+brew "pnpm", args: ["--ignore-dependencies"]
 brew "ripgrep"
 brew "shellcheck"
 brew "starship"
-brew "yarn", args: ["--without-node"]
+brew "yarn", args: ["--ignore-dependencies"]
 brew "z"
 brew "yqrashawn/goku/goku"
 
 cask "1password"
-cask "brave-browser"
+# cask "brave-browser"
 cask "font-fira-code-nerd-font"
 cask "cleanshot"
 cask "karabiner-elements"
