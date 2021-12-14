@@ -45,6 +45,14 @@ alias yt="yarn test"
 alias yu="yarn upgrade-interactive"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Dotfiles
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+alias dot="cd ~/Code/dotfiles"
+alias dotu="code ~/Code/dotfiles"
+alias dotc="dot && gaa && gc -m 'Update' && gp"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Misc
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
