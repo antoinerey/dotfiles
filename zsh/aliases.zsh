@@ -42,15 +42,15 @@ alias gb="git branch"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias y="yarn"
-alias yt="y test"
-alias yu="y upgrade-interactive"
+alias yt="yarn test"
+alias yu="yarn upgrade-interactive"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # pnpm
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias p="pnpm"
-alias pt="p test"
+alias pt="pnpm test"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Dotfiles
@@ -58,7 +58,7 @@ alias pt="p test"
 
 alias dot="cd ~/Code/dotfiles"
 alias dotu="code ~/Code/dotfiles"
-alias dotc="dot && gaa && gc -m 'Update' && gp"
+alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Misc
