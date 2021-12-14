@@ -9,7 +9,6 @@ alias grep="rg"
 alias rm="rm -rf"
 alias k="kubectl"
 alias n="sudo n"
-alias p="pnpm"
 
 # Reuse the same VSCode window, instead of creating new ones.
 alias code="code -r"
@@ -17,6 +16,8 @@ alias code="code -r"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# TODO: Add autocompletion to git aliases.
 
 # Since `.gitconfig` does not support environment variables, let's create an
 # alias to load secrets at runtime, and avoid hardcoding them in the file.
@@ -41,8 +42,15 @@ alias gb="git branch"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias y="yarn"
-alias yt="yarn test"
-alias yu="yarn upgrade-interactive"
+alias yt="y test"
+alias yu="y upgrade-interactive"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# pnpm
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+alias p="pnpm"
+alias pt="p test"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Dotfiles
