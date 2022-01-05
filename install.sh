@@ -11,10 +11,6 @@ ln -Fs "$(pwd)/zsh/.zshrc" ~/.zshrc
 ln -Fs "$(pwd)/zsh/aliases.zsh" "$ZSH/custom/aliases.zsh"
 ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
 
-if [ -f "$(pwd)/zsh/secret.zsh" ]; then
-  ln -Fs "$(pwd)/zsh/secret.zsh"  "$ZSH/custom/secret.zsh"
-fi
-
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
