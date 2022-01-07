@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+alias cd="z"
 alias c="clear"
 alias l="exa -lah"
 alias ll="l"
@@ -24,6 +25,7 @@ alias gds="git diff --ignore-space-change --staged"
 alias gs="git status --short"
 alias gaa="git add --all"
 alias gco="git checkout"
+alias gcob="git checkout -b"
 alias gc="git commit"
 alias gpl="git pull"
 alias gp="git push"

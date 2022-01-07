@@ -23,7 +23,7 @@ brew "ripgrep"
 brew "shellcheck"
 brew "starship"
 brew "yarn", args: ["--ignore-dependencies"]
-brew "z"
+brew "zoxide"
 brew "yqrashawn/goku/goku"
 
 cask "1password"

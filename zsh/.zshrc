@@ -56,13 +56,17 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
 # Initialise Startship prompt
 # See: https://starship.rs
 eval "$(starship init zsh)"
+
+# Initialise Zoxide (z)
+# See https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
 
 # Updates PATH for the Google Cloud SDK.
 if [ -f '/Users/antoine/google-cloud-sdk/path.zsh.inc' ]; then
