@@ -8,6 +8,7 @@ tap "homebrew/services"
 tap "yqrashawn/goku"
 
 brew "bat"
+brew "cloc"
 brew "deno"
 brew "diff-so-fancy"
 brew "exa"
