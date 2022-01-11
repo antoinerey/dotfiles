@@ -31,7 +31,7 @@ alias gpl="git pull"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gb="git branch"
-alias gr="git reset --hard"
+alias grh="git reset --hard"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Yarn
