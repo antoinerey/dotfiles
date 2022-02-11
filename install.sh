@@ -94,7 +94,7 @@ echo "✔ Menu bar automatically hidden"
 defaults write -g ApplePressAndHoldEnabled -bool false
 echo "✔ Long keypress action disabled"
 
-defaults write -g InitialKeyRepeat -int 10
+defaults write -g InitialKeyRepeat -int 50
 defaults write -g KeyRepeat -int 1
 echo "✔ Key repeat rate configured"
 
