@@ -64,4 +64,10 @@ alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias rsource="source ~/.zshrc"
-alias circleci="open 'https://app.circleci.com/pipelines/github/BackMarket/$(basename $(pwd))'"
+
+function circleci {
+  directory=$(pwd)
+  repository=$(basename $directory)
+
+  open "https://app.circleci.com/pipelines/github/BackMarket/$repository"
+}
