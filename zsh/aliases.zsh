@@ -34,6 +34,8 @@ alias gpf="git push --force-with-lease"
 alias gb="git branch"
 alias grh="git reset --hard"
 
+alias ghb="gh browse"
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Yarn
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -62,3 +64,4 @@ alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias rsource="source ~/.zshrc"
+alias circleci="open 'https://app.circleci.com/pipelines/github/BackMarket/$(basename $(pwd))'"

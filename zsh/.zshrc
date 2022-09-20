@@ -80,3 +80,15 @@ fi
 
 # Enables shell command completion using fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PNPM_HOME="/Users/antoine/Library/pnpm"
+export PATH="/Users/antoine/.deno/bin:$PATH"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="./node_modules/.bin:$PATH"
+
+# bun completions
+[ -s "/Users/antoine/.bun/_bun" ] && source "/Users/antoine/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/antoine/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
