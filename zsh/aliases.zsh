@@ -19,6 +19,12 @@ alias code="code -r"
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# Get the default branch name.
+# From https://joshtronic.com/2020/08/09/how-to-get-the-default-git-branch
+function git_default_branch() {
+  (git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') 2>/dev/null
+}
+
 alias g="git"
 alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gd="git diff --ignore-space-change"
@@ -26,13 +32,16 @@ alias gds="git diff --ignore-space-change --staged"
 alias gs="git status --short"
 alias gaa="git add --all"
 alias gco="git checkout"
+alias gcm="git checkout $(git_default_branch)"
 alias gcob="git checkout -b"
 alias gc="git commit"
 alias gpl="git pull"
+alias gpm="git pull origin $(git_default_branch)"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gb="git branch"
 alias grh="git reset --hard"
+alias grc="git rebase --continue"
 
 alias ghb="gh browse"
 
@@ -71,3 +80,5 @@ function circleci {
 
   open "https://app.circleci.com/pipelines/github/BackMarket/$repository"
 }
+
+
