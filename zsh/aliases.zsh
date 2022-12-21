@@ -25,6 +25,11 @@ function git_default_branch() {
   (git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') 2>/dev/null
 }
 
+# Those are functions because we want to execute git_default_branch when they
+# are called (vs. execute when the terminal loads as it is for aliases).
+function gcm() { git checkout $(git_default_branch) }
+function gplm() { git pull origin $(git_default_branch) }
+
 alias g="git"
 alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gd="git diff --ignore-space-change"
@@ -32,11 +37,9 @@ alias gds="git diff --ignore-space-change --staged"
 alias gs="git status --short"
 alias gaa="git add --all"
 alias gco="git checkout"
-alias gcm="git checkout $(git_default_branch)"
 alias gcob="git checkout -b"
 alias gc="git commit"
 alias gpl="git pull"
-alias gpm="git pull origin $(git_default_branch)"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
 alias gb="git branch"
