@@ -27,7 +27,7 @@ function git_default_branch() {
 
 # Those are functions because we want to execute git_default_branch when they
 # are called (vs. execute when the terminal loads as it is for aliases).
-function gcm() { git checkout $(git_default_branch) }
+function gcom() { git checkout $(git_default_branch) }
 function gplm() { git pull origin $(git_default_branch) }
 
 alias g="git"
