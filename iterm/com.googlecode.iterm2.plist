@@ -314,6 +314,8 @@
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
+	<key>HideTab</key>
+	<true/>
 	<key>Hotkey</key>
 	<false/>
 	<key>HotkeyChar</key>

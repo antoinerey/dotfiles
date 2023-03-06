@@ -47,6 +47,7 @@ alias grh="git reset --hard"
 alias grc="git rebase --continue"
 
 alias ghb="gh browse"
+alias ghpr="gh pr view --web"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Yarn

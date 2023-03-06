@@ -33,6 +33,10 @@ HYPHEN_INSENSITIVE="true"
 # We do not want ZSH to automatically compute the terminal title.
 DISABLE_AUTO_TITLE="true"
 
+function precmd () {
+  echo -ne "\033]0;${PWD##*/}\007"
+}
+
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -92,3 +96,9 @@ export PATH="./node_modules/.bin:$PATH"
 # Bun
 export BUN_INSTALL="/Users/antoine/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
