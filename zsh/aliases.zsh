@@ -11,6 +11,7 @@ alias mkdir="mkdir -p"
 alias rm="rm -rf"
 alias k="kubectl"
 alias n="sudo n"
+alias vim="nvim"
 
 # Reuse the same VSCode window, instead of creating new ones.
 alias code="code -r"

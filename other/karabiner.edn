@@ -27,20 +27,13 @@
         {
             :des "Hyper mode"
             :rules [
-                [:caps_lock [:!SCOleft_control] nil {:alone :escape}] ;; Hyper key
+                [:caps_lock [:left_control] nil {:alone :escape}] ;; Hyper key
+                [:!Ccaps_lock [:!Cleft_control]]
 
-                [:!!j [:down_arrow]]
-                [:!!k [:up_arrow]]
-                [:!!h [:left_arrow]]
-                [:!!l [:right_arrow]]
-
-                [:!!c [:!Tc] :vscode] ;; Ctrl+C is quite common in terminals
-                [:!!r [:!Tr] :iterm] ;; Look for previous commands
-                [:!!c [:!Tc] :iterm] ;; Ctrl+C is quite common in terminals
-                [:!!r [:!Tr] :kitty] ;; Look for previous commands
-                [:!!c [:!Tc] :kitty] ;; Ctrl+C is quite common in terminals
-                [:!!r [:!Tr] :warp] ;; Look for previous commands
-                [:!!c [:!Tc] :warp] ;; Ctrl+C is quite common in terminals
+                ;; [:!!j [:down_arrow]]
+                ;; [:!!k [:up_arrow]]
+                ;; [:!!h [:left_arrow]]
+                ;; [:!!l [:right_arrow]]
 
                 [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
                 [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.

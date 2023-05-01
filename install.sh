@@ -12,6 +12,20 @@ ln -Fs "$(pwd)/zsh/aliases.zsh" "$ZSH/custom/aliases.zsh"
 ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Neovim
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+mkdir -p ~/.config/nvim
+ln -Fs "$(pwd)/nvim" ~/.config/nvim
+
+## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# tmux
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+ln -Fs "$(pwd)/tmux/.tmux.conf" ~/.tmux.conf
+ln -Fs "$(pwd)/tmux" ~/.tmux
+
+ # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -19,14 +33,6 @@ mkdir -p ~/.config/git
 ln -Fs "$(pwd)/git/.gitconfig"      ~/.gitconfig
 ln -Fs "$(pwd)/git/.gitignore"      ~/.config/git/.gitignore
 ln -Fs "$(pwd)/git/.git-commit.tpl" ~/.config/git/.git-commit.tpl
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Kitty
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-mkdir -p ~/.config/kitty
-ln -Fs "$(pwd)/kitty/kitty.conf"    ~/.config/kitty/kitty.conf
-ln -Fs "$(pwd)/kitty/dracula.conf"  ~/.config/kitty/dracula.conf
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Other

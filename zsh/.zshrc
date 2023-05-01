@@ -33,6 +33,8 @@ HYPHEN_INSENSITIVE="true"
 # We do not want ZSH to automatically compute the terminal title.
 DISABLE_AUTO_TITLE="true"
 
+# Display the current directory in the terminal tab title.
+# Before: `-zsh` / After: `directory (-zsh)`.
 function precmd () {
   echo -ne "\033]0;${PWD##*/}\007"
 }
@@ -102,3 +104,10 @@ if [ -f '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/antoine/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Launch tmux as soon as the terminal opens.
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
