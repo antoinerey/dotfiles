@@ -47,8 +47,7 @@ use('tpope/vim-surround')
 use('tpope/vim-eunuch')
 
 -- Automatically adjusts tabs & spaces settings.
--- TODO: Conflict with 'sheerun/vim-polyglot'?
--- use('tpope/vim-sleuth')
+use('tpope/vim-sleuth')
 
 -- Allows repeating custom commands.
 use('tpope/vim-repeat')
@@ -94,6 +93,18 @@ use({
   },
   config = function()
     require('user/plugins/telescope')
+  end,
+})
+
+-- Display indentation lines.
+use('lukas-reineke/indent-blankline.nvim')
+
+-- A Status line.
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('user/plugins/lualine')
   end,
 })
 
