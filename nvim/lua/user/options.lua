@@ -4,6 +4,9 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
+-- Always keep two columns free for icons and signs.
+vim.opt.signcolumn = 'yes:2'
+
 -- Automatically indent lines when necessary. 
 vim.opt.smartindent = true
 

@@ -99,12 +99,20 @@ use({
 -- Display indentation lines.
 use('lukas-reineke/indent-blankline.nvim')
 
--- A Status line.
+-- Seup a status line.
 use({
   'nvim-lualine/lualine.nvim',
   requires = 'kyazdani42/nvim-web-devicons',
   config = function()
     require('user/plugins/lualine')
+  end,
+})
+
+-- Git integration.
+use({
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('user/plugins/gitsigns')
   end,
 })
 
