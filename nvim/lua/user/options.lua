@@ -10,8 +10,11 @@ vim.opt.wrap = true
 -- Always keep two columns free for icons and signs.
 vim.opt.signcolumn = 'yes:2'
 
--- Automatically indent lines when necessary. 
+-- Automatically indent lines when necessary.
 vim.opt.smartindent = true
+
+-- Display a vertical line at 100 chars.
+vim.opt.colorcolumn = '100'
 
 -- Display relative line numbers.
 vim.opt.number = true
@@ -19,6 +22,7 @@ vim.opt.relativenumber = true
 
 -- Configure auto-completion behaviour when typing commands.
 vim.opt.wildmode = 'longest:full,full'
+vim.opt.completeopt = 'menuone,longest,preview'
 
 -- Enable mouse in all modes.
 vim.opt.mouse = 'a'

@@ -28,6 +28,47 @@ require('lspconfig').jsonls.setup({
   },
 })
 
+-- null-ls
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+require('null-ls').setup({
+  sources = {
+    -- Enable ESLint errors.
+    require('null-ls').builtins.diagnostics.eslint_d.with({
+      condition = function(utils)
+        return utils.root_has_file({ '.eslintrc.js' })
+      end,
+    }),
+
+    -- Enable ESLint auto-fix.
+    require('null-ls').builtins.formatting.eslint_d.with({
+      condition = function(utils)
+        return utils.root_has_file({ '.eslintrc.js' })
+      end,
+    }),
+
+    -- Enable Prettier.
+    require('null-ls').builtins.formatting.prettier,
+  },
+
+  -- Setup formatting on save.
+  -- Disabled for now since it's kinda slow. I may enable it again in the future if I feel the need.
+  -- See https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save.
+  -- on_attach = function(client, bufnr)
+  --   if client.supports_method("textDocument/formatting") then
+  --     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+  --     vim.api.nvim_create_autocmd("BufWritePre", {
+  --       group = augroup,
+  --       buffer = bufnr,
+  --       callback = function()
+  --         vim.lsp.buf.format({ bufnr = bufnr })
+  --       end,
+  --     })
+  --   end
+  -- end,
+})
+
+require('mason-null-ls').setup({ automatic_installation = true })
+
 -- Keymaps
 vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
@@ -37,6 +78,9 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+
+-- Commands
+vim.api.nvim_create_user_command('Format', vim.lsp.buf.format, {})
 
 -- Sign configuration
 vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
