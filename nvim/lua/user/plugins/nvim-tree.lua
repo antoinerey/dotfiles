@@ -24,8 +24,8 @@ require('nvim-tree').setup({
   },
   filters = {
     custom = {
-      -- Never not display the .git directory.
       '^.git$',
+      '^.DS_Store',
     },
   },
 })
