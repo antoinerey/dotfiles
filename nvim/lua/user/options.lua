@@ -4,6 +4,9 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
+-- Enable soft wrap.
+vim.opt.wrap = true
+
 -- Always keep two columns free for icons and signs.
 vim.opt.signcolumn = 'yes:2'
 
