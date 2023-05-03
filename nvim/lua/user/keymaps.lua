@@ -24,7 +24,7 @@ vim.keymap.set('v', 'p', '"_dP')
 vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
 
 -- Easily exit from insert mode.
-vim.keymap.set('i', 'jk', '<Esc>l')
+-- vim.keymap.set('i', 'jk', '<Esc>l')
 
 -- Move lines up and down.
 --   Ï corresponds to Alt+j.
