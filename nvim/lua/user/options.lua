@@ -14,7 +14,7 @@ vim.opt.signcolumn = 'yes:2'
 vim.opt.smartindent = true
 
 -- Display a vertical line at 100 chars.
-vim.opt.colorcolumn = '100'
+vim.opt.colorcolumn = '80'
 
 -- Display relative line numbers.
 vim.opt.number = true

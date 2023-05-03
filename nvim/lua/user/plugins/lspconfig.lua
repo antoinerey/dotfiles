@@ -79,6 +79,7 @@ vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 vim.keymap.set('n', '<Leader>f', '<cmd> lua vim.lsp.buf.format()<CR>')
+vim.keymap.set('n', '<Leader>k', '<cmd> lua vim.lsp.buf.code_action()<CR>')
 
 -- Configure diagnostics.
 vim.diagnostic.config({
