@@ -2,6 +2,9 @@ local actions = require('telescope.actions')
 
 require('telescope').setup({
   defaults = {
+    -- Launch telescope in normal mode by default.
+    initial_mode = 'normal',
+    -- Move the search box at the top (instead of bottom).
     layout_config = {
       prompt_position = 'top',
     },
@@ -26,4 +29,4 @@ require('telescope').setup({
 
 vim.keymap.set('n', '<leader>p', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
 vim.keymap.set('n', '<leader>P', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All files' })<Cr>]])
-vim.keymap.set('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
+vim.keymap.set('n', '<leader>o', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
