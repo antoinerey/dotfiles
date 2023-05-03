@@ -27,6 +27,9 @@ cmp.setup({
   },
   -- Enable a few mappings.
   mapping = {
+    -- Manually trigger the completion menu.
+    ['<C-l>'] = cmp.mapping.complete(),
+
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
