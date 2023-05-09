@@ -30,20 +30,28 @@ require('nvim-tree').setup({
   },
 })
 
+local api = require('nvim-tree.api')
+
 -- Switch focus between the tree and the current buffer.
 -- See https://github.com/nvim-tree/nvim-tree.lua/discussions/1672
 function toggle_focus()
-	if vim.fn.bufname():match 'NvimTree_' then
-		vim.cmd.wincmd 'p'
-	else
-		vim.cmd('NvimTreeFindFile')
-	end
+  if vim.fn.bufname():match 'NvimTree_' then
+    vim.cmd.wincmd 'p'
+  else
+    vim.cmd('NvimTreeFindFile')
+  end
 end
 
 -- Open/close the tree, but do not focus it.
 function toggle_tree()
-  require('nvim-tree.api').tree.toggle({ focus = false })
+  api.tree.toggle({ focus = false })
 end
 
 vim.keymap.set('n', '<Leader>E', '<cmd>:lua toggle_tree()<CR>')
 vim.keymap.set('n', '<Leader>e', '<cmd>:lua toggle_focus()<CR>')
+
+-- Automatically open file upon creation.
+-- https://github.com/nvim-tree/nvim-tree.lua/wiki/Recipes#automatically-open-file-upon-creation
+api.events.subscribe(api.events.Event.FileCreated, function(file)
+  vim.cmd("edit " .. file.fname)
+end)

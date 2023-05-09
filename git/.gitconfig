@@ -10,6 +10,10 @@
 [pull]
 	rebase = true
 
+[push]
+	# Do not ask for upstream when pushing for the first time.
+	autoSetupRemote = true
+
 [fetch]
 	prune = true
 
