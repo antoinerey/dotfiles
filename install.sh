@@ -5,10 +5,10 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 ln -Fs "$(pwd)/zsh/.zshrc" ~/.zshrc
+ln -Fs "$(pwd)/zsh/.zshenv" ~/.zshenv
 
 # Any file symlinked to ZSH custom directory will be automatically sourced.
 # See https://github.com/ohmyzsh/ohmyzsh/issues/4865#issuecomment-401121707.
-ln -Fs "$(pwd)/zsh/aliases.zsh" "$ZSH/custom/aliases.zsh"
 ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

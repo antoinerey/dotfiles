@@ -43,3 +43,4 @@ require('telescope').setup({
 vim.keymap.set('n', '<leader>p', [[<cmd>lua require('telescope.builtin').find_files()<CR>]])
 vim.keymap.set('n', '<leader>P', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true, prompt_title = 'All files' })<Cr>]])
 vim.keymap.set('n', '<leader>o', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
+vim.keymap.set('n', '<leader>g', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])

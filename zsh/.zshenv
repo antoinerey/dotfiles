@@ -1,4 +1,6 @@
-#!/bin/zsh
+# All my aliases are configured here because .zshenv is loaded on all shell
+# (interactive and non-interactive ones), which means that thanks to aliases
+# being here, they are available on Vim shell commands.
 
 alias cd="z"
 alias c="clear"
