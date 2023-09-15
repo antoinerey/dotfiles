@@ -74,7 +74,7 @@ alias pt="pnpm test"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias dot="cd ~/Code/dotfiles"
-alias dotu="v ~/Code/dotfiles"
+alias dotu="code ~/Code/dotfiles"
 alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

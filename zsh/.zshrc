@@ -91,6 +91,7 @@ export PNPM_HOME="/Users/antoine/Library/pnpm"
 export PATH="/Users/antoine/.deno/bin:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="./node_modules/.bin:$PATH"
+export PATH="/Users/antoine/.local/share/ken/bin:$PATH"
 
 # bun completions
 [ -s "/Users/antoine/.bun/_bun" ] && source "/Users/antoine/.bun/_bun"

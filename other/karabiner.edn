@@ -27,13 +27,17 @@
         {
             :des "Hyper mode"
             :rules [
-                [:caps_lock [:left_control] nil {:alone :escape}] ;; Hyper key
-                [:!Ccaps_lock [:!Cleft_control]]
+                [:caps_lock [:!SCOleft_control] nil {:alone :escape}] ;; Hyper key
+                [:!Ccaps_lock [:!SCOleft_control]]
 
-                ;; [:!!j [:down_arrow]]
-                ;; [:!!k [:up_arrow]]
-                ;; [:!!h [:left_arrow]]
-                ;; [:!!l [:right_arrow]]
+                [:!!j [:down_arrow]]
+                [:!!k [:up_arrow]]
+                [:!!h [:left_arrow]]
+                [:!!l [:right_arrow]]
+
+                [:!!r [:!Tr] :iterm] ;; Ctrl+R
+                [:!!c [:!Tc] :iterm] ;; Ctrl+C
+                [:!!c [:!Td] :iterm] ;; Ctrl+D
 
                 [:!Cp [:!Co] :craft] ;; Muscle memories are hard to dismiss.
                 [:!Ck [:!Co] :craft] ;; Muscle memories are hard to dismiss.
