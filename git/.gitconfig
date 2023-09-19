@@ -3,9 +3,11 @@
 	email = antoine.rey@backmarket.com
 
 [core]
-	# The --pattern flag allows to use n/N as shortcuts to jump between files.
-	pager = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
 	excludesfile = ~/.config/git/.gitignore
+
+[pager]
+	# The --pattern flag allows to use n/N as shortcuts to jump between files.
+	diff = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
 
 [pull]
 	rebase = true

@@ -90,7 +90,7 @@ fi
 export PNPM_HOME="/Users/antoine/Library/pnpm"
 export PATH="/Users/antoine/.deno/bin:$PATH"
 export PATH="$PNPM_HOME:$PATH"
-export PATH="./node_modules/.bin:$PATH"
+# export PATH="./node_modules/.bin:$PATH"
 export PATH="/Users/antoine/.local/share/ken/bin:$PATH"
 
 # bun completions
@@ -112,3 +112,5 @@ export PATH="/Users/antoine/.rd/bin:$PATH"
 
 # Launch tmux as soon as the terminal opens.
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
