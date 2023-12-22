@@ -15,6 +15,7 @@ alias k="kubectl"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias nt="nr test"
 
 # Reuse the same VSCode window, instead of creating new ones.
 alias code="code -r"
@@ -85,8 +86,9 @@ alias rsource="source ~/.zshrc"
 function circleci {
   directory=$(pwd)
   repository=$(basename $directory)
+  branch=$(git rev-parse --abbrev-ref HEAD)
 
-  open "https://app.circleci.com/pipelines/github/BackMarket/$repository"
+  open "https://app.circleci.com/pipelines/github/BackMarket/$repository?branch=$branch"
 }
 
 
