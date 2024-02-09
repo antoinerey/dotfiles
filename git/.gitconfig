@@ -51,7 +51,7 @@
 
 [commit]
 	template = ~/.config/git/.git-commit.tpl
-	gpgSign = true
+	# gpgSign = true
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/

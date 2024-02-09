@@ -74,31 +74,12 @@ eval "$(starship init zsh)"
 # See https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
 
-# Updates PATH for the Google Cloud SDK.
-if [ -f '/Users/antoine/google-cloud-sdk/path.zsh.inc' ]; then
-  source '/Users/antoine/google-cloud-sdk/path.zsh.inc';
-fi
-
-# Enables shell command completion for gcloud.
-if [ -f '/Users/antoine/google-cloud-sdk/completion.zsh.inc' ]; then
-  source '/Users/antoine/google-cloud-sdk/completion.zsh.inc';
-fi
-
 # Enables shell command completion using fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PNPM_HOME="/Users/antoine/Library/pnpm"
-export PATH="/Users/antoine/.deno/bin:$PATH"
 export PATH="$PNPM_HOME:$PATH"
 # export PATH="./node_modules/.bin:$PATH"
-export PATH="/Users/antoine/.local/share/ken/bin:$PATH"
-
-# bun completions
-[ -s "/Users/antoine/.bun/_bun" ] && source "/Users/antoine/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="/Users/antoine/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/share/ken/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc'; fi
@@ -114,3 +95,11 @@ export PATH="/Users/antoine/.rd/bin:$PATH"
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/antoine.rey/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

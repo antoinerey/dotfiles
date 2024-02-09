@@ -15,15 +15,15 @@ ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
 # Neovim
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-mkdir -p ~/.config/nvim
-ln -Fs "$(pwd)/nvim" ~/.config/nvim
+# mkdir -p ~/.config/nvim
+# ln -Fs "$(pwd)/nvim" ~/.config/nvim
 
 ## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # tmux
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -Fs "$(pwd)/tmux/.tmux.conf" ~/.tmux.conf
-ln -Fs "$(pwd)/tmux" ~/.tmux
+# ln -Fs "$(pwd)/tmux/.tmux.conf" ~/.tmux.conf
+# ln -Fs "$(pwd)/tmux" ~/.tmux
 
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
@@ -38,7 +38,7 @@ ln -Fs "$(pwd)/git/.git-commit.tpl" ~/.config/git/.git-commit.tpl
 # Other
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-ln -Fs "$(pwd)/other/karabiner.edn" ~/.config/karabiner.edn
+# ln -Fs "$(pwd)/other/karabiner.edn" ~/.config/karabiner.edn
 ln -Fs "$(pwd)/other/starship.toml" ~/.config/starship.toml
 ln -Fs "$(pwd)/other/.hushlogin"    ~/.hushlogin
 
@@ -46,11 +46,11 @@ ln -Fs "$(pwd)/other/.hushlogin"    ~/.hushlogin
 # Brew
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-if ! [ -x "$(command -v brew)" ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
+# if ! [ -x "$(command -v brew)" ]; then
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# fi
 
-brew bundle install --file "$(pwd)/other/Brewfile" --no-lock
+# brew bundle install --file "$(pwd)/other/Brewfile" --no-lock
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Applications
@@ -62,8 +62,8 @@ echo "✔ gh configured"
 
 # Register Goku service to launch at login.
 # See: https://github.com/yqrashawn/GokuRakuJoudo#usage
-brew services restart yqrashawn/goku/goku
-echo "✔ goku configured"
+# brew services restart yqrashawn/goku/goku
+# echo "✔ goku configured"
 
 # Enable fzf auto-complete and key bindings.
 # See: https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
@@ -74,8 +74,8 @@ echo "✔ fzf configured"
 # MacOS Settings
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
-echo "✔ Switched to dark mode"
+# osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
+# echo "✔ Switched to dark mode"
 
 defaults write com.apple.finder QuitMenuItem -bool true
 echo "✔ Finder may be quit"

@@ -2,10 +2,12 @@
 # (interactive and non-interactive ones), which means that thanks to aliases
 # being here, they are available on Vim shell commands.
 
+alias ...="../.."
+
 alias cd="z"
 alias c="clear"
 alias l="exa -lah"
-alias ll="l"
+alias ll="exa -lah"
 alias tree="exa -lah --tree --git-ignore --ignore-glob .git"
 alias cat="bat"
 alias grep="rg"
