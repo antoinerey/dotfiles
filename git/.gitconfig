@@ -3,8 +3,8 @@
 	email = antoine.rey@backmarket.com
 
 [core]
-	editor = code --wait
-	diff = diff-so-fancy | less --tabs=4 -RFX
+	# editor = code --wait
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	excludesfile = ~/.config/git/.gitignore
 
 [pull]
@@ -26,6 +26,7 @@
 [color "diff"]
 	meta = 11
 	frag = magenta bold
+	func = 146 bold
 	commit = yellow bold
 	old = red bold
 	new = green bold
@@ -43,15 +44,23 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 
-[diff-so-fancy]
-	markEmptyLines = false
-
 [init]
 	defaultBranch = main
 
 [commit]
 	template = ~/.config/git/.git-commit.tpl
-	# gpgSign = true
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[diff-so-fancy]
+	markEmptyLines = false
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /Users/antoine.rey/Code/front-apps

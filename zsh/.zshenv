@@ -28,6 +28,14 @@ alias code="code -r"
 
 # Get the default branch name.
 # From https://joshtronic.com/2020/08/09/how-to-get-the-default-git-branch
+#
+# Sometimes, no branch are set as "default". In such cases, you can use the
+# following command line from any branch to make the main branch the default.
+#
+# ```
+# git checkout main
+# git remote set-head origin --auto
+# ```
 function git_default_branch() {
   (git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') 2>/dev/null
 }
@@ -85,12 +93,12 @@ alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 
 alias rsource="source ~/.zshrc"
 
-function circleci {
-  directory=$(pwd)
-  repository=$(basename $directory)
-  branch=$(git rev-parse --abbrev-ref HEAD)
+# function circleci {
+#   directory=$(pwd)
+#   repository=$(basename $directory)
+#   branch=$(git rev-parse --abbrev-ref HEAD)
 
-  open "https://app.circleci.com/pipelines/github/BackMarket/$repository?branch=$branch"
-}
+#   open "https://app.circleci.com/pipelines/github/BackMarket/$repository?branch=$branch"
+# }
 
 
