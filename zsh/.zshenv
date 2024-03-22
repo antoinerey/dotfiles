@@ -45,6 +45,16 @@ function git_default_branch() {
 function gcom() { git checkout $(git_default_branch) }
 function gplm() { git pull origin $(git_default_branch) }
 
+function gb() {
+    git branch --sort=-committerdate | fzf \
+        --bind 'enter:execute(git switch {1})' \
+        --bind 'enter:+abort' \
+        --bind 'ctrl-d:execute-silent(git branch -D {1})' \
+        --bind 'ctrl-d:+reload-sync(git branch --sort=-committerdate)' \
+        --header 'Enter to Switch branch, CTRL+D to [D]elete branch' \
+        --preview 'git diff --color {1} | diff-so-fancy'
+}
+
 alias g="git"
 alias gl="git log --format='%Cgreen%h%Creset %s - %Cblue%an%Creset' --no-merges"
 alias gd="git diff --ignore-space-change"
@@ -57,7 +67,7 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-alias gb="git branch"
+# alias gb="git branch --sort=-committerdate | fzf --bind 'ctrl-d:execute-silent(git branch -D {1})+reload-sync(git branch --sort=-committerdate)' --header 'CTRL+D to [D]elete branch' --preview 'git diff --color {1} | diff-so-fancy' | xargs git switch"
 alias grh="git reset --hard"
 alias grc="git rebase --continue"
 
@@ -93,12 +103,5 @@ alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 
 alias rsource="source ~/.zshrc"
 
-# function circleci {
-#   directory=$(pwd)
-#   repository=$(basename $directory)
-#   branch=$(git rev-parse --abbrev-ref HEAD)
-
-#   open "https://app.circleci.com/pipelines/github/BackMarket/$repository?branch=$branch"
-# }
 
 

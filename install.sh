@@ -15,8 +15,8 @@ ln -Fs "$(pwd)/zsh/env.zsh"     "$ZSH/custom/env.zsh"
 # Neovim
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# mkdir -p ~/.config/nvim
-# ln -Fs "$(pwd)/nvim" ~/.config/nvim
+mkdir -p ~/.config/nvim
+ln -Fs "$(pwd)/nvim" ~/.config/nvim
 
 ## # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # tmux
