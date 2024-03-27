@@ -88,7 +88,7 @@ if [ -f '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users
 if [ -f '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/antoine/.rd/bin:$PATH"
+export PATH="/Users/antoine.rey/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # Launch tmux as soon as the terminal opens.
