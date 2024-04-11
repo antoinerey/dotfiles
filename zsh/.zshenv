@@ -22,6 +22,8 @@ alias nt="nr test"
 # Reuse the same VSCode window, instead of creating new ones.
 alias code="code -r"
 
+alias web="webstorm ."
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Git
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -67,10 +69,8 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gp="git push"
 alias gpf="git push --force-with-lease"
-# alias gb="git branch --sort=-committerdate | fzf --bind 'ctrl-d:execute-silent(git branch -D {1})+reload-sync(git branch --sort=-committerdate)' --header 'CTRL+D to [D]elete branch' --preview 'git diff --color {1} | diff-so-fancy' | xargs git switch"
 alias grh="git reset --hard"
 alias grc="git rebase --continue"
-
 alias ghb="gh browse"
 alias ghpr="gh pr view --web"
 
@@ -102,6 +102,3 @@ alias dotc="cd ~/Code/dotfiles && gaa && gc -m 'Update' && gp && cd -"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 alias rsource="source ~/.zshrc"
-
-
-
