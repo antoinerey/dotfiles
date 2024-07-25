@@ -81,12 +81,6 @@ export PATH="$PNPM_HOME:$PATH"
 # export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.local/share/ken/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
-
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/antoine.rey/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
@@ -95,6 +89,7 @@ export PATH="/Users/antoine.rey/.rd/bin:$PATH"
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_FEATURE_PNPM=1
 
 # pnpm
 export PNPM_HOME="/Users/antoine.rey/Library/pnpm"
@@ -111,3 +106,9 @@ eval "$(pyenv init -)"
 
 # Poetry
 export PATH="/Users/antoine.rey/.local/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/antoine.rey/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/antoine.rey/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/antoine.rey/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/antoine.rey/google-cloud-sdk/completion.zsh.inc'; fi
